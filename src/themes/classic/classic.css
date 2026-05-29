@@ -1,0 +1,197 @@
+/* src/themes/classic/classic.css */
+.theme-classic {
+  /* Modern Premium Background (Neutral Gray Gradient) */
+  background: linear-gradient(135deg, #171717 0%, #0a0a0a 100%);
+  color: #F3F4F6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base structural flex */
+.theme-classic .app-container {
+  flex: 1;
+}
+
+/* Header - Glassmorphism */
+.theme-classic .header {
+  background: rgba(23, 23, 23, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.theme-classic .header-logo a {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.theme-classic .nav-link {
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.theme-classic .nav-link:hover,
+.theme-classic .nav-link.active {
+  color: #ffffff;
+}
+
+/* Theme Toggle Button */
+.theme-classic .theme-toggle-btn {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #d1d5db;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-classic .theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Cards & Containers - Glassmorphism */
+.theme-classic .project-card,
+.theme-classic .me-block,
+.theme-classic .project-cover-container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.theme-classic .project-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease;
+}
+
+.theme-classic .project-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3); /* Corporate white accent */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.theme-classic .card-image-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.theme-classic .gallery-image {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Typography Overrides */
+.theme-classic .home-title,
+.theme-classic .me-title,
+.theme-classic .contact-title,
+.theme-classic .project-detail-title {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.theme-classic .project-title {
+  color: #f9fafb;
+}
+
+.theme-classic .project-description,
+.theme-classic .contact-intro {
+  color: #9ca3af;
+}
+
+.theme-classic .me-block h2 {
+  border-bottom: none;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+/* Custom underline for titles in glass blocks */
+.theme-classic .me-block h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+/* Project Tags */
+.theme-classic .project-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #d1d5db;
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+}
+
+/* Buttons */
+.theme-classic .action-btn {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.theme-classic .action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.theme-classic .live-btn {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.theme-classic .live-btn:hover {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+/* Links */
+.theme-classic .project-link {
+  color: #d1d5db;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+
+.theme-classic .project-link:hover {
+  color: #ffffff;
+}
+
+.theme-classic .email-link {
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.theme-classic .email-link:hover {
+  color: #a3a3a3;
+  border-color: #a3a3a3;
+}
+
+/* Error fallback */
+.theme-classic .error-container {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}

@@ -7,6 +7,8 @@ import ProjectDetail from './pages/ProjectDetail';
 import Me from './pages/Me';
 import Contact from './pages/Contact';
 
+import './themes/classic/classic.css';
+
 function NotFound() {
   return (
     <div className="error-container">
