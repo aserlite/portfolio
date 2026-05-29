@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "prj-001",
+      "slug": "neon-fluidity",
+      "title": "Neon Fluidity",
+      "description": "An experimental WebGL project focusing on organic, interactive fluid simulations using custom GLSL shaders and React Three Fiber.",
+      "tags": ["React", "WebGL", "GLSL", "Framer Motion"],
+      "coverImage": "/images/placeholder.jpg",
+      "gallery": [
+        "/images/placeholder.jpg",
+        "/images/placeholder.jpg"
+      ],
+      "links": {
+        "github": "https://github.com/ton-pseudo/neon-fluidity",
+        "live": "https://ton-pseudo.github.io/neon-fluidity"
+      }
+    },
+    {
+      "id": "prj-002",
+      "slug": "fintech-dashboard",
+      "title": "Fintech Dashboard",
+      "description": "A modern, high-performance financial dashboard with a brutalist UI approach, complex data visualizations, and absolute strict typing.",
+      "tags": ["TypeScript", "Vite", "D3.js", "Zustand"],
+      "coverImage": "/images/placeholder.jpg",
+      "gallery": [
+        "/images/placeholder.jpg"
+      ],
+      "links": {
+        "github": "https://github.com/ton-pseudo/fintech-dash",
+        "live": ""
+      }
+    },
+    {
+      "id": "prj-003",
+      "slug": "minimal-agency",
+      "title": "Minimal Agency",
+      "description": "A headless e-commerce concept for a creative agency. Built with a focus on micro-interactions, smooth page transitions, and extreme minimalism.",
+      "tags": ["React", "TailwindCSS", "Lenis Scroll"],
+      "coverImage": "/images/placeholder.jpg",
+      "gallery": [
+        "/images/placeholder.jpg",
+        "/images/placeholder.jpg",
+        "/images/placeholder.jpg"
+      ],
+      "links": {
+        "github": "",
+        "live": "https://ton-pseudo.github.io/minimal-agency"
+      }
+    }
+  ]
+}
