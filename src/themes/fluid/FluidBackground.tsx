@@ -76,7 +76,7 @@ function FluidShader() {
   );
 }
 
-export default function FluidBackground() {
+export default function FluidBackground({ isDiscreet = false }: { isDiscreet?: boolean }) {
   return (
     <>
       <FluidGrain />
@@ -87,7 +87,9 @@ export default function FluidBackground() {
         width: '100vw',
         height: '100vh',
         zIndex: -1,
-        pointerEvents: 'none'
+        pointerEvents: 'none',
+        opacity: isDiscreet ? 0.35 : 1,
+        transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
       }}>
         <Canvas>
           <FluidShader />

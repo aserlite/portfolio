@@ -1,0 +1,133 @@
+/* ============================================================
+   global.css — Reset, Polices, Conteneur racine
+   NE PAS ajouter de styles de composants ou de pages ici.
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Thèmes des boutons ── */
+:root {
+  /* Theme Classic (Par défaut) — Brutaliste, sans arrondi */
+  --btn-radius: 0px;
+  --btn-primary-bg: #f0f0f0;
+  --btn-primary-color: #0a0a0a;
+  --btn-primary-border: 1px solid transparent;
+  --btn-primary-shadow: none;
+  --btn-primary-backdrop: none;
+  
+  --btn-primary-hover-bg: #e0e0e0;
+  --btn-primary-hover-color: #0a0a0a;
+  --btn-primary-hover-shadow: none;
+  --btn-primary-hover-transform: translateY(-2px);
+  
+  --btn-ghost-bg: transparent;
+  --btn-ghost-color: #f0f0f0;
+  --btn-ghost-border: 1px solid rgba(240, 240, 240, 0.25);
+  --btn-ghost-shadow: none;
+  --btn-ghost-backdrop: none;
+  
+  --btn-ghost-hover-bg: transparent;
+  --btn-ghost-hover-color: #f0f0f0;
+  --btn-ghost-hover-border: 1px solid rgba(240, 240, 240, 0.6);
+  --btn-ghost-hover-shadow: none;
+  --btn-ghost-hover-transform: translateY(-2px);
+}
+
+.theme-fluid {
+  /* Theme Fluid — Glassmorphism, organique, ombres portées, arrondis */
+  --btn-radius: 100px;
+  --btn-primary-bg: rgba(255, 255, 255, 0.1);
+  --btn-primary-color: #fff;
+  --btn-primary-border: 1px solid rgba(255, 255, 255, 0.25);
+  --btn-primary-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255,255,255,0.1);
+  --btn-primary-backdrop: blur(16px);
+  
+  --btn-primary-hover-bg: rgba(255, 255, 255, 0.2);
+  --btn-primary-hover-color: #fff;
+  --btn-primary-hover-shadow: 0 0 25px rgba(255, 255, 255, 0.4), inset 0 0 15px rgba(255,255,255,0.2);
+  --btn-primary-hover-transform: translateY(-3px) scale(1.02);
+  
+  --btn-ghost-bg: rgba(0, 0, 0, 0.15);
+  --btn-ghost-color: rgba(255, 255, 255, 0.6);
+  --btn-ghost-border: 1px solid rgba(255, 255, 255, 0.08);
+  --btn-ghost-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  --btn-ghost-backdrop: blur(12px);
+  
+  --btn-ghost-hover-bg: rgba(255, 255, 255, 0.08);
+  --btn-ghost-hover-color: #fff;
+  --btn-ghost-hover-border: 1px solid rgba(255, 255, 255, 0.3);
+  --btn-ghost-hover-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  --btn-ghost-hover-transform: translateY(-3px) scale(1.02);
+}
+
+/* ── Racine React ── */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Layout de l'application ── */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  /* Chaque page gère son propre max-width et padding */
+}
+
+/* ── Utilitaire d'erreur (partagé) ── */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 8rem 2rem;
+  min-height: 60vh;
+}

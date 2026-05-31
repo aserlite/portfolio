@@ -1,0 +1,110 @@
+/* Me.module.css */
+
+.section {
+  padding: 6rem 2rem 4rem;
+  animation: fadeIn 0.6s ease both;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Titre ── */
+.heading {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* ── Intro ── */
+.intro {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(240, 240, 240, 0.45);
+  margin-bottom: 3.5rem;
+  max-width: 40rem;
+  animation: fadeIn 0.6s 0.2s ease both;
+}
+
+/* ── Liste des passions ── */
+.passions {
+  display: flex;
+  flex-direction: column;
+}
+
+.passion {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.08);
+  cursor: default;
+  transition: border-color 0.3s ease;
+  animation: fadeInLeft 0.5s ease both;
+}
+
+.passion:first-child {
+  border-top: 1px solid rgba(240, 240, 240, 0.08);
+}
+
+.passion:hover {
+  border-bottom-color: rgba(240, 240, 240, 0.35);
+}
+
+.passion:first-child:hover {
+  border-top-color: rgba(240, 240, 240, 0.35);
+}
+
+.label {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: rgba(240, 240, 240, 0.55);
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.passion:hover .label {
+  color: #f0f0f0;
+  transform: translateX(0.5rem);
+}
+
+/* ── Outro ── */
+.outro {
+  margin-top: 4rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(240, 240, 240, 0.4);
+  max-width: 40rem;
+  animation: fadeIn 0.6s 0.5s ease both;
+}
+
+.outroLink {
+  color: #f0f0f0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(240, 240, 240, 0.3);
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.outroLink:hover {
+  text-decoration-color: #f0f0f0;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

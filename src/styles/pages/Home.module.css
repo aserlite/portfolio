@@ -1,0 +1,157 @@
+/* Home.module.css */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  animation: fadeIn 0.8s ease both;
+}
+
+.inner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(3rem, 8vw, 6rem);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+    padding-top: 6rem;
+  }
+}
+
+/* ── Portrait ── */
+.portrait {
+  flex-shrink: 0;
+  animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Conteneur de l'image portrait — remplacer le div par <img> quand la photo est prête */
+.portraitFrame {
+  width: clamp(220px, 22vw, 320px);
+  height: clamp(280px, 28vw, 400px);
+  background: rgba(240, 240, 240, 0.04);
+  border: 1px solid rgba(240, 240, 240, 0.08);
+  /* TODO: supprimer ce div et le remplacer par <img src="..." className={styles.portraitImg} /> */
+}
+
+.portraitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.5s ease;
+}
+
+.portraitImg:hover {
+  filter: grayscale(0%);
+}
+
+/* ── Contenu texte ── */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideUpIn 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #f0f0f0;
+}
+
+.titleAccent {
+  color: rgba(240, 240, 240, 0.3);
+}
+
+.typing {
+  animation: fadeIn 0.8s 0.4s ease both;
+}
+
+/* ── CTA ── */
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s 0.7s ease both;
+}
+
+@media (max-width: 768px) {
+  .cta {
+    justify-content: center;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.85rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--btn-radius, 0px);
+}
+
+.btnPrimary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border: var(--btn-primary-border);
+  box-shadow: var(--btn-primary-shadow);
+  backdrop-filter: var(--btn-primary-backdrop);
+  -webkit-backdrop-filter: var(--btn-primary-backdrop);
+}
+
+.btnPrimary:hover {
+  background: var(--btn-primary-hover-bg);
+  color: var(--btn-primary-hover-color);
+  box-shadow: var(--btn-primary-hover-shadow);
+  transform: var(--btn-primary-hover-transform, translateY(-2px));
+}
+
+.btnGhost {
+  background: var(--btn-ghost-bg);
+  color: var(--btn-ghost-color);
+  border: var(--btn-ghost-border);
+  box-shadow: var(--btn-ghost-shadow);
+  backdrop-filter: var(--btn-ghost-backdrop);
+  -webkit-backdrop-filter: var(--btn-ghost-backdrop);
+}
+
+.btnGhost:hover {
+  background: var(--btn-ghost-hover-bg);
+  color: var(--btn-ghost-hover-color);
+  border: var(--btn-ghost-hover-border);
+  box-shadow: var(--btn-ghost-hover-shadow);
+  transform: var(--btn-ghost-hover-transform, translateY(-2px));
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUpIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
