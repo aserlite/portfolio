@@ -1,4 +1,5 @@
 import type { Project } from '../../types/Project';
+import styles from '../../styles/pages/ProjectDetail.module.css';
 
 interface Props {
   project: Project;
@@ -6,11 +7,11 @@ interface Props {
 
 export default function ProjectDetailHeader({ project }: Props) {
   return (
-    <header className="project-detail-header">
-      <h1 className="project-detail-title">{project.title}</h1>
-      <ul className="project-detail-tags">
+    <header className={styles.header}>
+      <h1 className={styles.title}>{project.title}</h1>
+      <ul className={styles.tags}>
         {project.tags.map((tag) => (
-          <li key={tag} className="project-tag">{tag}</li>
+          <li key={tag} className={styles.tag}>{tag}</li>
         ))}
       </ul>
     </header>

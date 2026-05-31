@@ -31,16 +31,30 @@
 /* ── Portrait ── */
 .portrait {
   flex-shrink: 0;
+  width: clamp(280px, 28vw, 420px);
+  height: clamp(360px, 36vw, 540px);
+  background: rgba(240, 240, 240, 0.04);
+  border: 1px solid rgba(240, 240, 240, 0.08);
+  border-radius: var(--portrait-radius, 0px);
+  overflow: hidden;
+  position: relative;
   animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Conteneur de l'image portrait — remplacer le div par <img> quand la photo est prête */
-.portraitFrame {
-  width: clamp(220px, 22vw, 320px);
-  height: clamp(280px, 28vw, 400px);
-  background: rgba(240, 240, 240, 0.04);
-  border: 1px solid rgba(240, 240, 240, 0.08);
-  /* TODO: supprimer ce div et le remplacer par <img src="..." className={styles.portraitImg} /> */
+.portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--portrait-overlay-bg, transparent);
+  mix-blend-mode: var(--portrait-overlay-blend, normal);
+  opacity: var(--portrait-overlay-opacity, 0);
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+.portrait:hover::after {
+  opacity: 0;
 }
 
 .portraitImg {

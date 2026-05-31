@@ -3,6 +3,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { fluidConfig } from './config';
 import FluidGrain from './FluidGrain';
+import './fluid.css';
 
 const vertexShader = `
   varying vec2 vUv;

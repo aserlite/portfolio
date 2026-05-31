@@ -1,5 +1,6 @@
 import { getImageUrl } from '../../utils/assetUtils';
 import type { Project } from '../../types/Project';
+import styles from '../../styles/pages/ProjectDetail.module.css';
 
 interface Props {
   project: Project;
@@ -11,15 +12,15 @@ export default function ProjectDetailGallery({ project }: Props) {
   }
 
   return (
-    <section className="project-gallery-section">
-      <h2 className="gallery-title">Galerie</h2>
-      <div className="project-gallery">
+    <section className={styles.gallerySection}>
+      <h2 className={styles.galleryTitle}>Galerie</h2>
+      <div className={styles.gallery}>
         {project.gallery.map((image, index) => (
           <img 
             key={index} 
             src={getImageUrl(image)} 
             alt={`${project.title} - Screenshot ${index + 1}`} 
-            className="gallery-image"
+            className={styles.galleryImage}
           />
         ))}
       </div>

@@ -4,6 +4,7 @@ import ProjectDetailHeader from '../components/Project/ProjectDetailHeader';
 import ProjectDetailCover from '../components/Project/ProjectDetailCover';
 import ProjectDetailContent from '../components/Project/ProjectDetailContent';
 import ProjectDetailGallery from '../components/Project/ProjectDetailGallery';
+import styles from '../styles/pages/ProjectDetail.module.css';
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -16,14 +17,14 @@ export default function ProjectDetail() {
       <div className="error-container">
         <h1>Projet non trouvé</h1>
         <p>Le projet avec l'identifiant "{id}" n'existe pas.</p>
-        <Link to="/projects" className="back-link">&larr; Retour aux projets</Link>
+        <Link to="/projects" className={styles.backLink}>&larr; Retour aux projets</Link>
       </div>
     );
   }
 
   return (
-    <article className="project-detail">
-      <Link to="/projects" className="back-link">&larr; Retour aux projets</Link>
+    <article className={styles.section}>
+      <Link to="/projects" className={styles.backLink}>&larr; Retour aux projets</Link>
       
       <ProjectDetailHeader project={project} />
       <ProjectDetailCover project={project} />

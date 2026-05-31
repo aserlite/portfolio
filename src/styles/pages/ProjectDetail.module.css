@@ -1,0 +1,188 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 6rem 2rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease both;
+}
+
+.backLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  align-self: flex-start;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  opacity: 1;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeInUp 0.6s 0.1s ease both;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #f0f0f0;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(240, 240, 240, 0.05);
+  border: 1px solid rgba(240, 240, 240, 0.15);
+  border-radius: 9999px;
+  color: #d1d5db;
+}
+
+/* ── Cover ── */
+.coverContainer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(240, 240, 240, 0.04);
+  animation: scaleIn 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.coverImage {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Content ── */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  animation: fadeInUp 0.6s 0.3s ease both;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(240, 240, 240, 0.7);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ── Action Buttons ── */
+.actionBtn {
+  display: inline-block;
+  padding: 0.85rem 1.85rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--btn-radius, 0px);
+}
+
+.btnGhost {
+  background: var(--btn-ghost-bg, transparent);
+  color: var(--btn-ghost-color, #f0f0f0);
+  border: var(--btn-ghost-border, 1px solid rgba(240, 240, 240, 0.25));
+  box-shadow: var(--btn-ghost-shadow, none);
+  backdrop-filter: var(--btn-ghost-backdrop, none);
+  -webkit-backdrop-filter: var(--btn-ghost-backdrop, none);
+}
+
+.btnGhost:hover {
+  background: var(--btn-ghost-hover-bg, transparent);
+  color: var(--btn-ghost-hover-color, #f0f0f0);
+  border: var(--btn-ghost-hover-border, 1px solid rgba(240, 240, 240, 0.6));
+  box-shadow: var(--btn-ghost-hover-shadow, none);
+  transform: var(--btn-ghost-hover-transform, translateY(-2px));
+}
+
+.btnPrimary {
+  background: var(--btn-primary-bg, #f0f0f0);
+  color: var(--btn-primary-color, #0a0a0a);
+  border: var(--btn-primary-border, 1px solid transparent);
+  box-shadow: var(--btn-primary-shadow, none);
+  backdrop-filter: var(--btn-primary-backdrop, none);
+  -webkit-backdrop-filter: var(--btn-primary-backdrop, none);
+}
+
+.btnPrimary:hover {
+  background: var(--btn-primary-hover-bg, #e0e0e0);
+  color: var(--btn-primary-hover-color, #0a0a0a);
+  box-shadow: var(--btn-primary-hover-shadow, none);
+  transform: var(--btn-primary-hover-transform, translateY(-2px));
+}
+
+/* ── Gallery ── */
+.gallerySection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+  animation: fadeInUp 0.6s 0.4s ease both;
+}
+
+.galleryTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.galleryImage {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 12px;
+  background: rgba(240, 240, 240, 0.04);
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}

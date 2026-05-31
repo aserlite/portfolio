@@ -1,18 +1,15 @@
 import TypingText from '../components/TypingText';
 import { Link } from 'react-router-dom';
+import { getImageUrl } from '../utils/assetUtils';
 import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
   return (
     <section id="accueil" className={styles.hero}>
       <div className={styles.inner}>
-        {/*
-          Portrait — PLACEHOLDER
-          Remplacer ce <div> par :
-          <img src="/images/arthur-portrait.jpg" alt="Arthur Cuvillon" className={styles.portraitImg} />
-        */}
+
         <div className={styles.portrait} aria-hidden="true">
-          <div className={styles.portraitFrame} />
+          <img src={getImageUrl('/images/acw.jpg')} alt="Arthur Cuvillon" className={styles.portraitImg} />
         </div>
 
         {/* Contenu texte */}

@@ -1,4 +1,5 @@
 import type { Project } from '../../types/Project';
+import styles from '../../styles/pages/ProjectDetail.module.css';
 
 interface Props {
   project: Project;
@@ -6,16 +7,16 @@ interface Props {
 
 export default function ProjectDetailContent({ project }: Props) {
   return (
-    <div className="project-content">
-      <p className="project-description">{project.description}</p>
+    <div className={styles.content}>
+      <p className={styles.description}>{project.description}</p>
       
-      <div className="project-actions">
+      <div className={styles.actions}>
         {project.links.github && (
           <a 
             href={project.links.github} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="action-btn github-btn"
+            className={`${styles.actionBtn} ${styles.btnGhost}`}
           >
             Code Source (GitHub)
           </a>
@@ -25,9 +26,9 @@ export default function ProjectDetailContent({ project }: Props) {
             href={project.links.live} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="action-btn live-btn"
+            className={`${styles.actionBtn} ${styles.btnPrimary}`}
           >
-            Démo en direct
+            Vers le projet
           </a>
         )}
       </div>

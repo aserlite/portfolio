@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/components/TypingText.module.css';
 
-// TODO: Adapter ces rôles selon ton profil réel
-const ROLES = ['Développeur Web', 'Codeur Créatif', 'DJ'];
+const ROLES = ['Dev Web', 'Photo', 'DJ'];
 
 export default function TypingText() {
   const [currentIndex, setCurrentIndex] = useState(0);
