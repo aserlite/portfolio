@@ -15,7 +15,6 @@ async function main() {
   try {
     console.log('\n--- Ajout d\'un nouveau projet ---');
 
-    // 1. Charger et parser le JSON existant
     if (!fs.existsSync(jsonFilePath)) {
       throw new Error(`Le fichier projects.json est introuvable à l'adresse : ${jsonFilePath}`);
     }
@@ -23,14 +22,12 @@ async function main() {
     const fileContent = fs.readFileSync(jsonFilePath, 'utf-8');
     const projects = JSON.parse(fileContent);
 
-    // 2. Calculer le prochain ID
     const numericIds = projects.map(p => {
       const parsed = parseInt(p.id, 10);
       return isNaN(parsed) ? 0 : parsed;
     });
     const nextId = (Math.max(0, ...numericIds) + 1).toString();
 
-    // 3. Poser les questions à l'utilisateur
     const title = await rl.question('Titre du projet : ');
     if (!title.trim()) {
       console.log('Erreur : Le titre du projet ne peut pas être vide.');
@@ -58,7 +55,6 @@ async function main() {
     const github = await rl.question('Lien GitHub (optionnel) : ');
     const live = await rl.question('Lien Live (optionnel) : ');
 
-    // 4. Créer le nouvel objet projet
     const newProject = {
       id: nextId,
       title: title.trim(),
@@ -72,7 +68,6 @@ async function main() {
       gallery: []
     };
 
-    // 5. Ajouter et sauvegarder
     projects.push(newProject);
     fs.writeFileSync(jsonFilePath, JSON.stringify(projects, null, 2), 'utf-8');
 

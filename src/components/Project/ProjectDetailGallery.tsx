@@ -4,9 +4,10 @@ import styles from '../../styles/pages/ProjectDetail.module.css';
 
 interface Props {
   project: Project;
+  onImageClick?: (url: string) => void;
 }
 
-export default function ProjectDetailGallery({ project }: Props) {
+export default function ProjectDetailGallery({ project, onImageClick }: Props) {
   if (!project.gallery || project.gallery.length === 0) {
     return null;
   }
@@ -21,6 +22,7 @@ export default function ProjectDetailGallery({ project }: Props) {
             src={getImageUrl(image)} 
             alt={`${project.title} - Screenshot ${index + 1}`} 
             className={styles.galleryImage}
+            onClick={() => onImageClick?.(getImageUrl(image))}
           />
         ))}
       </div>
