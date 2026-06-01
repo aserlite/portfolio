@@ -19,6 +19,7 @@ const PASSIONS: Passion[] = [
 
 export default function Me() {
   const [hoveredPassion, setHoveredPassion] = useState<Passion | null>(null);
+  const [randomRotation, setRandomRotation] = useState<number>(0);
   const { x, y } = useMousePosition();
 
   return (
@@ -35,7 +36,11 @@ export default function Me() {
             <div
               key={passion.id}
               className={`${styles.passion}${hoveredPassion?.id === passion.id ? ` ${styles.passionActive}` : ''}`}
-              onMouseEnter={() => setHoveredPassion(passion)}
+              onMouseEnter={() => {
+                setHoveredPassion(passion);
+                const angle = Math.random() * 30 - 15;
+                setRandomRotation(angle);
+              }}
               onMouseLeave={() => setHoveredPassion(null)}
               style={{ animationDelay: `${i * 0.08}s` }}
             >
@@ -50,10 +55,9 @@ export default function Me() {
 
       </div>
 
-      {/* Image flottante qui suit le curseur */}
       <div 
         className={`${styles.floatingImageContainer} ${hoveredPassion ? styles.floatingImageVisible : ''}`}
-        style={{ transform: `translate3d(${x}px, ${y}px, 0)` }}
+        style={{ transform: `translate3d(${x}px, ${y}px, 0) rotate(${randomRotation}deg)` }}
         aria-hidden="true"
       >
         {hoveredPassion && (
