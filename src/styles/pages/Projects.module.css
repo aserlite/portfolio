@@ -188,6 +188,30 @@
   font-size: 0.93rem;
   line-height: 1.7;
   color: rgba(240, 240, 240, 0.5);
+  white-space: pre-line;
+}
+
+.seeMoreBtn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.6rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(240, 240, 240, 0.3);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.seeMoreBtn:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* ── Liens de la ligne ── */

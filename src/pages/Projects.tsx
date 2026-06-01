@@ -20,6 +20,12 @@ interface RowProps {
 
 function ProjectRow({ project, index }: RowProps) {
   const isReversed = index % 2 !== 0;
+  const CHARACTER_LIMIT = 150;
+  const shouldTruncate = project.description.length > CHARACTER_LIMIT;
+
+  const displayText = shouldTruncate
+    ? `${project.description.slice(0, CHARACTER_LIMIT)}`
+    : project.description;
 
   return (
     <div
@@ -47,7 +53,17 @@ function ProjectRow({ project, index }: RowProps) {
           ))}
         </ul>
 
-        <p className={styles.desc}>{project.description}</p>
+        <p className={styles.desc}>
+          {displayText}
+          {shouldTruncate && (
+            <Link
+              to={`/project/${project.id}`}
+              className={styles.seeMoreBtn}
+            >
+              ... Voir plus
+            </Link>
+          )}
+        </p>
 
         <div className={`${styles.rowLinks}${isReversed ? ` ${styles.rowLinksRight}` : ''}`}>
           {project.links.live && (

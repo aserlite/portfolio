@@ -1,4 +1,5 @@
 import type { Project } from '../../types/Project';
+import DescriptionFormatter from './DescriptionFormatter';
 import styles from '../../styles/pages/ProjectDetail.module.css';
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 export default function ProjectDetailContent({ project }: Props) {
   return (
     <div className={styles.content}>
-      <p className={styles.description}>{project.description}</p>
+      <DescriptionFormatter description={project.description} />
       
       <div className={styles.actions}>
         {project.links.github && (
