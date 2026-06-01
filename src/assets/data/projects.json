@@ -1,52 +1,194 @@
-{
-  "projects": [
-    {
-      "id": "prj-001",
-      "slug": "neon-fluidity",
-      "title": "Neon Fluidity",
-      "description": "Projet expérimental WebGL centré sur des simulations de fluides organiques et interactifs, développé avec des shaders GLSL personnalisés et React Three Fiber.",
-      "tags": ["React", "WebGL", "GLSL", "Framer Motion"],
-      "coverImage": "/images/placeholder.jpg",
-      "gallery": [
-        "/images/placeholder.jpg",
-        "/images/placeholder.jpg"
-      ],
-      "links": {
-        "github": "https://github.com/ton-pseudo/neon-fluidity",
-        "live": "https://ton-pseudo.github.io/neon-fluidity"
-      }
+[
+  {
+    "id": "1",
+    "title": "Kubb",
+    "description": "Présentation du jeu Kubb écrite et réalisée en duo avec un ami de ma promotion",
+    "tags": [
+      "Video"
+    ],
+    "coverImage": "/images/projects/kubb.png",
+    "links": {
+      "live": "https://www.youtube.com/watch?v=jpMHcPN58jQ"
     },
-    {
-      "id": "prj-002",
-      "slug": "fintech-dashboard",
-      "title": "Fintech Dashboard",
-      "description": "Tableau de bord financier haute performance à l'esthétique brutaliste, avec des visualisations de données complexes et un typage TypeScript strict.",
-      "tags": ["TypeScript", "Vite", "D3.js", "Zustand"],
-      "coverImage": "/images/placeholder.jpg",
-      "gallery": [
-        "/images/placeholder.jpg"
-      ],
-      "links": {
-        "github": "https://github.com/ton-pseudo/fintech-dash",
-        "live": ""
-      }
+    "gallery": []
+  },
+  {
+    "id": "2",
+    "title": "Artips",
+    "description": "Vidéo réalisée en cours de culture artistique ayant pour but de présenter brièvement de manière originale une oeuvre choisie",
+    "tags": [
+      "Video"
+    ],
+    "coverImage": "/images/projects/artips.png",
+    "links": {
+      "live": "https://youtu.be/T_ExZ1HgQJ0?si=sWEpIUBvvN8osdLu"
     },
-    {
-      "id": "prj-003",
-      "slug": "minimal-agency",
-      "title": "Minimal Agency",
-      "description": "Concept de vitrine e-commerce pour une agence créative. Construit autour de micro-interactions soignées, de transitions de pages fluides et d'un minimalisme extrême.",
-      "tags": ["React", "TailwindCSS", "Lenis Scroll"],
-      "coverImage": "/images/placeholder.jpg",
-      "gallery": [
-        "/images/placeholder.jpg",
-        "/images/placeholder.jpg",
-        "/images/placeholder.jpg"
-      ],
-      "links": {
-        "github": "",
-        "live": "https://ton-pseudo.github.io/minimal-agency"
-      }
-    }
-  ]
-}
+    "gallery": []
+  },
+  {
+    "id": "3",
+    "title": "Babylon market",
+    "description": "Babylon market est un concept d'urbanisme où tous les services essentiels sont situés à 15 minutes à pied, à vélo ou en transports en commun.\nCe projet a été fait au cours d’un projet international Erasmus avec des étudiants de Lens (France) , Porto (Portugal) , Łódź (Pologne) et Dundalk (Irlande)\n\nMaquette réalisée avec Adobe XD.",
+    "tags": [
+      "UX / UI"
+    ],
+    "coverImage": "/images/projects/babylon_market.png",
+    "links": {},
+    "gallery": []
+  },
+  {
+    "id": "4",
+    "title": "Floating summer",
+    "description": "Réalisation du site vitrine d'un festival fictif que les membres de mon équipe et moi avons mis en place, du concept aux visuels. Site réalisé sous WordPress",
+    "tags": [
+      "Backend"
+    ],
+    "coverImage": "/images/projects/floating_summer.png",
+    "links": {},
+    "gallery": []
+  },
+  {
+    "id": "5",
+    "title": "Maquette terre éclat",
+    "description": "Réalisation d’une maquette pour une marque de céramique fictive dans le cadre d’un cours d’UX/UI.\nCette maquette a été réalisée sur Figma.",
+    "tags": [
+      "UX / UI"
+    ],
+    "coverImage": "/images/projects/terre_eclat.png",
+    "links": {
+      "live": "https://www.figma.com/design/c36wtPmugQws530G0XHfQc/Maquettage?node-id=0-1&t=78tgfbO6lD19Dv08-1"
+    },
+    "gallery": []
+  },
+  {
+    "id": "6",
+    "title": "Galerie photo",
+    "description": "Photographies que j’ai pu réaliser au cours de ma vie, elles représentent des lieux ou passions qui me sont chères et ont été prises avec mon appareil photo (canon 1100D).",
+    "tags": [
+      "Photo"
+    ],
+    "coverImage": "/images/projects/gallery.png",
+    "links": {},
+    "gallery": []
+  },
+  {
+    "id": "7",
+    "title": "Site d’évènements",
+    "description": "Réalisation d’un site de gestion complète d’événements avec pages d’administrations, gestion des rôles, emailing 2 jours avant les événements et gestion des infos utilisateurs.\nSite réalisé avec Laravel, Tailwind, vue, Jetstream et Filament.",
+    "tags": [
+      "Backend"
+    ],
+    "coverImage": "/images/projects/my-events.png",
+    "links": {
+      "github": "https://github.com/aserlite/devBack_events"
+    },
+    "gallery": []
+  },
+  {
+    "id": "8",
+    "title": "Anomaly",
+    "description": "Anomaly est une exposition novatrice d'art généré par des intelligences artificielles, présentant des anachronismes artistiques fusionnant cinq mouvements historiques avec des éléments contemporains. Ce site est développé sous Laravel avec le compilateur vite.",
+    "tags": [
+      "Front"
+    ],
+    "coverImage": "/images/projects/anomaly.png",
+    "links": {
+      "github": "https://github.com/aserlite/marathon-web"
+    },
+    "gallery": []
+  },
+  {
+    "id": "9",
+    "title": "Tuto qwik js",
+    "description": "Cours complet dispensé aux autres étudiants de MMI 3ème année spé WEB afin de leur faire découvrir le méta-framework Qwik par le biais de la conception d’un tableau periodique.\nLes supports ont été réalisés sur Figma et le site avec Qwik et Tailwind.",
+    "tags": [
+      "Front"
+    ],
+    "coverImage": "/images/projects/qwik.png",
+    "links": {
+      "github": "https://github.com/sqmasep/univ-qwik-tutorial"
+    },
+    "gallery": []
+  },
+  {
+    "id": "10",
+    "title": "La nuit mmi",
+    "description": "La Nuit MMI, c’est un événement qui a pour but de réunir tous les MMI a l’IUT, ancien et profs compris. Mon groupe et moi avons créé cet événement de toute pièce et avons géré tous les aspects de celui-ci, du site web (avec billetterie développée de A à Z) à la gestion du jour J en passant par la demande d’autorisations, le financement et tout ce qu’un tel événement implique.\nCet événement fut une réussite et a réuni près de 200 personnes ainsi que plus de 100 projets déposés par les invités.",
+    "tags": [
+      "Backend"
+    ],
+    "coverImage": "/images/projects/lnm.png",
+    "links": {
+      "github": "https://github.com/aserlite/LNM"
+    },
+    "gallery": []
+  },
+  {
+    "id": "11",
+    "title": "Dans l'ombre",
+    "description": "Participation au documentaire \"Dans l'ombre\" de Ludoc en tant que pisteur. Ce film retrace une enquête de 4 ans visant à traquer, localiser et faire arrêter un pédocriminel. Mon rôle a contribué à la reconstitution des images sur place.",
+    "tags": [
+      "Video"
+    ],
+    "coverImage": "/images/projects/ludoc.png",
+    "links": {
+      "live": "https://www.youtube.com/watch?v=jYujNvHj6Mc"
+    },
+    "gallery": []
+  },
+  {
+    "id": "12",
+    "title": "La banane",
+    "description": "Réalisation d'un court métrage dans le cadre de ma première année a l'IMAC, court métrage tourné et monté par notre groupe de 5 et gagnant du prix du scénario lors des IMACannes 2025.",
+    "tags": [
+      "Video",
+      "Court métrage"
+    ],
+    "coverImage": "/images/projects/banane.png",
+    "links": {
+      "live": "https://www.youtube.com/watch?v=j8tbtBRdIlA"
+    },
+    "gallery": []
+  },
+  {
+    "id": "13",
+    "title": "Parodie c'est pas sorcier",
+    "description": "Réalisation d'un court métrage parodique pendant un événement \"48h du court métrage\" de l'association 803Z. Ce court métrage a été entièrement crée en 48h avec des contraintes données par l'association organisatrice",
+    "tags": [
+      "Video",
+      "Court métrage"
+    ],
+    "coverImage": "/images/projects/passource.png",
+    "links": {
+      "live": "https://www.youtube.com/watch?v=sIvupi1DG74"
+    },
+    "gallery": []
+  },
+  {
+    "id": "114",
+    "title": "Captation de soirée",
+    "description": "Captation sur un stand photo pendant une soirée, captation mobile dans la soirée, retouche des photos et réalisation du post récapitulation dans le cadre d'une élection pour le BDE ESIEE Paris",
+    "tags": [
+      "Photo"
+    ],
+    "coverImage": "/images/projects/post_fk.png",
+    "links": {
+      "live": "https://lightroom.adobe.com/shares/d3a5b56dc964437bba18f6a996c5d085?fbclid=PAT01DUANB8LRleHRuA2FlbQIxMAABp6F41Q9-9ywsfRsiiULZrv5xbeOPx_LSOd3f5c7KxiahsXT2HWvACf7HQ5nT_aem_6vFvjWlyrdYmLINNYbX-Eg"
+    },
+    "gallery": []
+  },
+  {
+    "id": "115",
+    "title": "95%",
+    "description": "Court métrage réalisé dans le cadre d'un projet de 2eme année d'IMAC",
+    "tags": [
+      "Vidéo",
+      "Court métrage"
+    ],
+    "coverImage": "/images/projects/95.jpg",
+    "links": {
+      "live": "https://www.youtube.com/watch?v=gUrIWUjjrtE"
+    },
+    "gallery": []
+  }
+]

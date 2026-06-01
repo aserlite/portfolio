@@ -57,7 +57,7 @@ function ProjectRow({ project, index }: RowProps) {
               rel="noopener noreferrer"
               className={`${styles.rowLink} ${styles.rowLinkPrimary}`}
             >
-              Voir le site →
+              Voir le projet →
             </a>
           )}
           {project.links.github && (

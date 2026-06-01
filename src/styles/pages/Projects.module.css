@@ -114,6 +114,7 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: rgba(240, 240, 240, 0.04);
+  border-radius: 12px;
 }
 
 .img {
@@ -192,6 +193,7 @@
 /* ── Liens de la ligne ── */
 .rowLinks {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
