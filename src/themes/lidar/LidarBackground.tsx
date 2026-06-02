@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useTheme } from '../../contexts/ThemeContext';
 
@@ -71,7 +71,7 @@ function PointCloud({ video }: { video: HTMLVideoElement }) {
 export default function LidarBackground() {
   const { setTheme } = useTheme();
   const [permissionGranted, setPermissionGranted] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [videoElement, setVideoElement] = useState<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     let stream: MediaStream | null = null;
@@ -95,7 +95,7 @@ export default function LidarBackground() {
         video.muted = true;
         await video.play();
         
-        videoRef.current = video;
+        setVideoElement(video);
         setPermissionGranted(true);
       } catch (err) {
         console.warn('Lidar theme: Webcam access denied or unavailable.', err);
@@ -112,21 +112,24 @@ export default function LidarBackground() {
       if (stream) {
         stream.getTracks().forEach(track => track.stop());
       }
-      if (videoRef.current) {
-        videoRef.current.pause();
-        videoRef.current.srcObject = null;
-      }
+      setVideoElement(prev => {
+        if (prev) {
+          prev.pause();
+          prev.srcObject = null;
+        }
+        return null;
+      });
     };
   }, [setTheme]);
 
-  if (!permissionGranted || !videoRef.current) {
+  if (!permissionGranted || !videoElement) {
     return null;
   }
 
   return (
     <div style={{ position: 'fixed', inset: 0, zIndex: -1, pointerEvents: 'none', background: '#01050a' }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
-        <PointCloud video={videoRef.current} />
+        <PointCloud video={videoElement} />
       </Canvas>
       <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(1, 5, 10, 0.7)' }} />
     </div>
