@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
+
+:global(.theme-ascii) {
+  font-family: 'VT323', monospace;
+  color: #00ff00;
+  --nav-bg: rgba(0, 0, 0, 0.95);
+}
+
+:global(.theme-ascii p),
+:global(.theme-ascii a),
+:global(.theme-ascii button),
+:global(.theme-ascii .project-description),
+:global(.theme-ascii .contact-intro) {
+  font-size: 1.15rem !important;
+}
+
+:global(.theme-ascii) {
+
+  --btn-radius: 0px;
+  
+  --btn-primary-bg: #000000;
+  --btn-primary-color: #00ff00;
+  --btn-primary-border: 1px solid #00ff00;
+  --btn-primary-shadow: none;
+  --btn-primary-backdrop: none;
+  
+  --btn-primary-hover-bg: #00ff00;
+  --btn-primary-hover-color: #000000;
+  --btn-primary-hover-border: 1px solid #00ff00;
+  --btn-primary-hover-shadow: 0 0 10px #00ff00;
+  --btn-primary-hover-transform: none;
+  
+  --btn-ghost-color: #00ff00;
+  --btn-ghost-border: 1px dashed #00ff00;
+  
+  --btn-ghost-hover-bg: rgba(0, 255, 0, 0.2);
+  --btn-ghost-hover-color: #00ff00;
+  --btn-ghost-hover-border: 1px solid #00ff00;
+}
+
+:global(.theme-ascii .project-card),
+:global(.theme-ascii .me-block),
+:global(.theme-ascii .error-container),
+:global(.theme-ascii .gallery-image),
+:global(.theme-ascii .project-cover-container) {
+  background: transparent !important;
+  border-color: #00ff00 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: #00ff00 !important;
+}
+
+:global(.theme-ascii .home-title),
+:global(.theme-ascii .me-title),
+:global(.theme-ascii .contact-title),
+:global(.theme-ascii .project-detail-title),
+:global(.theme-ascii .project-title),
+:global(.theme-ascii .project-description),
+:global(.theme-ascii .contact-intro),
+:global(.theme-ascii .titleAccent) {
+  color: #00ff00 !important;
+}
+
+:global(.theme-ascii h1),
+:global(.theme-ascii h2),
+:global(.theme-ascii h3),
+:global(.theme-ascii h4),
+:global(.theme-ascii .home-title),
+:global(.theme-ascii .me-title),
+:global(.theme-ascii .contact-title),
+:global(.theme-ascii .project-detail-title),
+:global(.theme-ascii .titleAccent),
+:global(.theme-ascii .heading),
+:global(.theme-ascii .headingAccent) {
+  font-family: 'Pixelify Sans', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+:global(.theme-ascii section#accueil img) {
+  filter: grayscale(110%) contrast(120%) brightness(0.7) sepia(100%) hue-rotate(70deg) saturate(500%) !important;
+  opacity: 0.9;
+  mix-blend-mode: hard-light;
+  transition: all 0.4s ease;
+}
+
+:global(.theme-ascii section#accueil img:hover) {
+  filter: grayscale(0%) contrast(100%) brightness(1) sepia(0%) hue-rotate(0deg) saturate(100%) !important;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+:global(.theme-ascii nav > div > a:first-child) {
+  font-size: 2.2rem !important;
+}
+
+:global(.theme-ascii .me-block h2::after) {
+  background: #00ff00 !important;
+}

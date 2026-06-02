@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import { useTheme } from '../contexts/ThemeContext';
 import FluidBackground from '../themes/fluid/FluidBackground';
 import BlueprintBackground from '../themes/blueprint/BlueprintBackground';
+import AsciiBackground from '../themes/ascii/AsciiBackground';
 
 export default function MainLayout() {
   const { theme } = useTheme();
@@ -17,6 +18,7 @@ export default function MainLayout() {
     <div className="app-container">
       {theme === 'fluid' && <FluidBackground isDiscreet={isDiscreet} />}
       {theme === 'blueprint' && <BlueprintBackground />}
+      {theme === 'ascii' && <AsciiBackground isDiscreet={isDiscreet} />}
       <Navigation />
       <main className="main-content">
         <Outlet />
