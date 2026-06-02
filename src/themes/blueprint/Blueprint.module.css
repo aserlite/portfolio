@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
 :global(.theme-blueprint) {
+  font-family: 'Space Mono', monospace;
   color: #e0f2fe;
   --nav-bg: rgba(4, 16, 33, 0.85);
 
-  /* Variables des boutons pour le thème Blueprint */
+  --portrait-overlay-bg: #38bdf8;
+  --portrait-overlay-blend: color;
+  --portrait-overlay-opacity: 0.85;
+
   --btn-radius: 0px;
   
   --btn-primary-bg: rgba(4, 16, 33, 0.7);
@@ -24,6 +30,24 @@
   --btn-ghost-hover-color: #e0f2fe;
   --btn-ghost-hover-border: 1px solid #38bdf8;
 }
+
+:global(.theme-blueprint h1),
+:global(.theme-blueprint h2),
+:global(.theme-blueprint h3),
+:global(.theme-blueprint h4),
+:global(.theme-blueprint .home-title),
+:global(.theme-blueprint .me-title),
+:global(.theme-blueprint .contact-title),
+:global(.theme-blueprint .project-detail-title),
+:global(.theme-ascii .project-title),
+:global(.theme-blueprint .titleAccent),
+:global(.theme-blueprint .heading),
+:global(.theme-blueprint .headingAccent) {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+
 
 .blueprintGrid {
   position: fixed;
