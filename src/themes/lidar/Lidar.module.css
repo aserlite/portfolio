@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ============================================================
+   Lidar.module.css
+   ============================================================ */
+
+:global(.theme-lidar) {
+  font-family: 'Space Mono', monospace !important;
+  color: #00ffcc;
+  --nav-bg: rgba(1, 5, 10, 0.9);
+  text-shadow: 0 0 4px rgba(0, 255, 204, 0.4);
+}
+
+:global(.theme-lidar) nav {
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+
+  --portrait-overlay-bg: transparent;
+  --portrait-overlay-blend: normal;
+  --portrait-overlay-opacity: 0;
+
+  --btn-radius: 2px;
+  
+  --btn-primary-bg: rgba(0, 255, 204, 0.05);
+  --btn-primary-color: #00ffcc;
+  --btn-primary-border: 1px solid #00ffcc;
+  --btn-primary-shadow: 0 0 10px rgba(0, 255, 204, 0.2), inset 0 0 5px rgba(0, 255, 204, 0.1);
+  --btn-primary-backdrop: blur(2px);
+  
+  --btn-primary-hover-bg: rgba(0, 255, 204, 0.2);
+  --btn-primary-hover-color: #ffffff;
+  --btn-primary-hover-border: 1px solid #ffffff;
+  --btn-primary-hover-shadow: 0 0 15px rgba(0, 255, 204, 0.4), inset 0 0 10px rgba(0, 255, 204, 0.2);
+  --btn-primary-hover-transform: none;
+  
+  --btn-ghost-color: #00ffcc;
+  --btn-ghost-border: 1px solid rgba(0, 255, 204, 0.3);
+  
+  --btn-ghost-hover-bg: rgba(0, 255, 204, 0.1);
+  --btn-ghost-hover-color: #ffffff;
+  --btn-ghost-hover-border: 1px solid #00ffcc;
+}
+
+:global(.theme-lidar h1),
+:global(.theme-lidar h2),
+:global(.theme-lidar h3),
+:global(.theme-lidar h4),
+:global(.theme-lidar .home-title),
+:global(.theme-lidar .me-title),
+:global(.theme-lidar .contact-title),
+:global(.theme-lidar .project-detail-title),
+:global(.theme-lidar .titleAccent),
+:global(.theme-lidar .heading),
+:global(.theme-lidar .headingAccent) {
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700 !important;
+  color: #00ffcc;
+}
+
+:global(.theme-lidar section#accueil img) {
+  opacity: 0.2;
+  filter: grayscale(100%) contrast(200%);
+  mix-blend-mode: screen;
+}
+
+:global(.theme-lidar section#accueil .portrait) {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 204, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+:global(.theme-lidar section#accueil .portrait::before) {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #00ffcc;
+  clip-path: polygon(
+    0 0, 10% 0, 10% 2px, 2px 2px, 2px 10%, 0 10%,
+    0 90%, 2px 90%, 2px calc(100% - 2px), 10% calc(100% - 2px), 10% 100%, 0 100%,
+    100% 100%, 90% 100%, 90% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 90%, 100% 90%,
+    100% 0, 90% 0, 90% 2px, calc(100% - 2px) 2px, calc(100% - 2px) 10%, 100% 10%
+  );
+  z-index: 5;
+  pointer-events: none;
+}

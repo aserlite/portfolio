@@ -4,6 +4,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import FluidBackground from '../themes/fluid/FluidBackground';
 import BlueprintBackground from '../themes/blueprint/BlueprintBackground';
 import AsciiBackground from '../themes/ascii/AsciiBackground';
+import LidarBackground from '../themes/lidar/LidarBackground';
 
 export default function MainLayout() {
   const { theme } = useTheme();
@@ -19,6 +20,7 @@ export default function MainLayout() {
       {theme === 'fluid' && <FluidBackground isDiscreet={isDiscreet} />}
       {theme === 'blueprint' && <BlueprintBackground />}
       {theme === 'ascii' && <AsciiBackground isDiscreet={isDiscreet} />}
+      {theme === 'lidar' && <LidarBackground />}
       <Navigation />
       <main className="main-content">
         <Outlet />
