@@ -88,6 +88,13 @@ export default function Navigation() {
               {item.label}
             </NavLink>
           ))}
+          <button 
+            onClick={toggleTheme} 
+            className={styles.themeBtnMobile}
+            style={{ animationDelay: `${NAV_ITEMS.length * 0.08}s` }}
+          >
+            Thème: {theme.charAt(0).toUpperCase() + theme.slice(1)}
+          </button>
         </div>
       </div>
     </>
