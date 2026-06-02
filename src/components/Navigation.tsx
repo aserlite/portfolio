@@ -53,7 +53,7 @@ export default function Navigation() {
               </NavLink>
             ))}
             <button onClick={toggleTheme} className={styles.themeBtn}>
-              {theme === 'classic' ? 'Fluid' : 'Classic'}
+              {theme.charAt(0).toUpperCase() + theme.slice(1)}
             </button>
           </div>
 

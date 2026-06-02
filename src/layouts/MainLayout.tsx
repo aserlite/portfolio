@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import { useTheme } from '../contexts/ThemeContext';
 import FluidBackground from '../themes/fluid/FluidBackground';
+import BlueprintBackground from '../themes/blueprint/BlueprintBackground';
 
 export default function MainLayout() {
   const { theme } = useTheme();
@@ -15,6 +16,7 @@ export default function MainLayout() {
   return (
     <div className="app-container">
       {theme === 'fluid' && <FluidBackground isDiscreet={isDiscreet} />}
+      {theme === 'blueprint' && <BlueprintBackground />}
       <Navigation />
       <main className="main-content">
         <Outlet />

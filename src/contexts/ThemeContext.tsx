@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
 
-export type Theme = 'fluid' | 'classic';
+export type Theme = 'fluid' | 'minimal' | 'blueprint';
 
 interface ThemeContextType {
   theme: Theme;
@@ -17,7 +17,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>('fluid');
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'fluid' ? 'classic' : 'fluid'));
+    const themes: Theme[] = ['fluid', 'minimal', 'blueprint'];
+    setTheme((prev) => themes[(themes.indexOf(prev) + 1) % themes.length]);
   };
 
   return (
