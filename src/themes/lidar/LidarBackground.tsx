@@ -50,11 +50,20 @@ function PointCloud({ video }: { video: HTMLVideoElement }) {
     uTexture: { value: videoTexture }
   }), [videoTexture]);
 
-
+  const { planeWidth, planeHeight, widthSegments, heightSegments } = useMemo(() => {
+    const aspect = (video.videoWidth || 16) / (video.videoHeight || 9);
+    const baseHeight = 10;
+    return {
+      planeWidth: baseHeight * aspect,
+      planeHeight: baseHeight,
+      widthSegments: Math.round(150 * aspect),
+      heightSegments: 150
+    };
+  }, [video]);
 
   return (
     <points ref={pointsRef} rotation={[0, Math.PI, 0]} scale={[1.2, 1.2, 1.2]}>
-      <planeGeometry args={[16, 9, 256, 144]} />
+      <planeGeometry args={[planeWidth, planeHeight, widthSegments, heightSegments]} />
       <shaderMaterial
         ref={shaderRef}
         vertexShader={vertexShader}
@@ -80,7 +89,11 @@ export default function LidarBackground() {
     async function initCamera() {
       try {
         stream = await navigator.mediaDevices.getUserMedia({ 
-          video: { facingMode: 'user', width: 640, height: 360 } 
+          video: { 
+            facingMode: 'user', 
+            width: { ideal: 640 }, 
+            height: { ideal: 480 } 
+          } 
         });
         
         if (!mounted) {
