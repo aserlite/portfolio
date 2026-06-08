@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { AsciiRenderer } from '@react-three/drei';
 import * as THREE from 'three';
 import './Ascii.module.css';
@@ -26,13 +26,19 @@ function AsciiScene() {
   );
 }
 
+function AsciiWrapper() {
+  const { size } = useThree();
+  if (size.width === 0 || size.height === 0) return null;
+  return <AsciiRenderer fgColor="#00ff00" bgColor="#000000" invert={true} resolution={0.15} />;
+}
+
 export default function AsciiBackground({ isDiscreet = false }: { isDiscreet?: boolean }) {
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none' }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
       <Canvas camera={{ position: [0, 0, 5] }}>
         <color attach="background" args={['black']} />
         <AsciiScene />
-        <AsciiRenderer fgColor="#00ff00" bgColor="#000000" invert={true} resolution={0.15} />
+        <AsciiWrapper />
       </Canvas>
       {isDiscreet && (
         <div style={{ 
