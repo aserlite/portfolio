@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { AsciiRenderer } from '@react-three/drei';
 import * as THREE from 'three';
-import './Ascii.module.css';
+import styles from './Ascii.module.css';
 
 function AsciiScene() {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -34,7 +34,7 @@ function AsciiWrapper() {
 
 export default function AsciiBackground({ isDiscreet = false }: { isDiscreet?: boolean }) {
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
+    <div className={styles.forceBundle} style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
       <Canvas camera={{ position: [0, 0, 5] }}>
         <color attach="background" args={['black']} />
         <AsciiScene />

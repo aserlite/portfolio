@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useTheme } from '../../contexts/ThemeContext';
+import styles from './Lidar.module.css';
 
 const vertexShader = `
 uniform sampler2D uTexture;
@@ -140,7 +141,7 @@ export default function LidarBackground() {
   }
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: -1, pointerEvents: 'none', background: '#01050a' }}>
+    <div className={styles.forceBundle} style={{ position: 'fixed', inset: 0, zIndex: -1, pointerEvents: 'none', background: '#01050a' }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
         <PointCloud video={videoElement} />
       </Canvas>
