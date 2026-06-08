@@ -28,7 +28,7 @@ function AsciiScene() {
 
 function AsciiWrapper() {
   const { size } = useThree();
-  if (size.width === 0 || size.height === 0) return null;
+  if (size.width < 10 || size.height < 10) return null;
   return <AsciiRenderer fgColor="#00ff00" bgColor="#000000" invert={true} resolution={0.15} />;
 }
 
