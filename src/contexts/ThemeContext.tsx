@@ -1,7 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
-export type Theme = 'fluid' | 'minimal' | 'blueprint' | 'ascii' | 'lidar';
+export const THEMES = ['fluid', 'minimal', 'blueprint', 'ascii', 'lidar'] as const;
+export type Theme = typeof THEMES[number];
 
 interface ThemeContextType {
   theme: Theme;
@@ -16,11 +17,20 @@ interface ThemeProviderProps {
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>('fluid');
+  const [theme, setTheme] = useState<Theme>(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved && THEMES.includes(saved as Theme)) {
+      return saved as Theme;
+    }
+    return THEMES[0];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const themes: Theme[] = ['fluid', 'minimal', 'blueprint', 'ascii', 'lidar'];
-    setTheme((prev) => themes[(themes.indexOf(prev) + 1) % themes.length]);
+    setTheme((prev) => THEMES[(THEMES.indexOf(prev) + 1) % THEMES.length]);
   };
 
   return (
