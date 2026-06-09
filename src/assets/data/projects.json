@@ -137,10 +137,24 @@
     "gallery": []
   },
   {
+    "id": "14",
+    "title": "Communication club Sono",
+    "description": "Réalisation de la communication pour le club Sono, les elements montrés ici ne sont qu'un extrait de la communication realisée pour le club, je vous invite a aller voir notre compte instagram pour voir le reste.",
+    "tags": ["Photo", "Communication"],
+    "coverImage": "/images/projects/post_bureau.png",
+    "links": {
+      "live": "https://www.instagram.com/la_sono_esiee/"
+    },
+    "gallery": [
+      "/images/projects/cover_winter.png",
+      "/images/projects/welcome.png"
+    ]
+  },
+  {
     "id": "114",
     "title": "Captation de soirée",
     "description": "Captation sur un stand photo pendant une soirée, captation mobile dans la soirée, retouche des photos et réalisation du post récapitulation dans le cadre d'une élection pour le BDE ESIEE Paris",
-    "tags": ["Photo"],
+    "tags": ["Photo", "Communication"],
     "coverImage": "/images/projects/post_fk.png",
     "links": {
       "live": "https://lightroom.adobe.com/shares/d3a5b56dc964437bba18f6a996c5d085?fbclid=PAT01DUANB8LRleHRuA2FlbQIxMAABp6F41Q9-9ywsfRsiiULZrv5xbeOPx_LSOd3f5c7KxiahsXT2HWvACf7HQ5nT_aem_6vFvjWlyrdYmLINNYbX-Eg"
@@ -209,6 +223,20 @@
   },
   {
     "id": "120",
+    "title": "Communication Boiler Room",
+    "description": "Réalisation de la communication et organisation d'une soirée type Boiler Room pour mon club La Sono ESIEE.",
+    "tags": ["Communication", "Post"],
+    "coverImage": "/images/projects/boiler.jpg",
+    "links": {
+      "live": "https://www.instagram.com/la_sono_esiee/"
+    },
+    "gallery": [
+      "/images/projects/boiler_lineup.jpg",
+      "/images/projects/boiler_story.jpg"
+    ]
+  },
+  {
+    "id": "121",
     "title": "MoteurVroum",
     "description": "MoteurVroum est un moteur de simulation 2D ultra-léger en Vanilla JS et HTML5 Canvas, optimisé pour les grilles infinies.\n\nVoici les 11 simulations incluses dans le dépôt :\n\nSandSimulation : Physique de particules interactive (sable, eau, lave, feu, explosions).\nCyberCircuit : Simulateur de flux d'électrons et portes logiques (Wireworld).\nNanoWar : Guerre de territoire haute performance entre colonies de nanobots.\nMapGenerator : Génération procédurale de biomes terrestres via le bruit de Perlin.\nGameOfLife : L'automate cellulaire classique de John Conway.\nDoom : Moteur 3D rétro temps réel en raycasting avec déplacement à la première personne.\nVoxel : Rendu 3D de paysages voxel avec élévation et caméra de vol libre.\nWebcam : Traitement vidéo temps réel avec filtres créatifs (Gameboy, Glitch, Néon).\nAudio : Visualiseur de spectre audio générant des flux cinétiques via le microphone.\nMazeSolver : Génération et résolution automatique de labyrinthes par propagation d'automate.\nTextureMaze : Labyrinthe texturé résolu visuellement pas-à-pas à l'aide d'un algorithme BFS.",
     "tags": ["Front"],
@@ -224,7 +252,7 @@
     ]
   },
   {
-    "id": "121",
+    "id": "122",
     "title": "Armvr",
     "description": "Armvr est un lecteur et visualiseur interactif de DJ sets conçu pour offrir une expérience musicale immersive et synchronisée. Développée avec React, Vite et Wavesurfer.js, l'application propose six modes de visualisation en HTML5 Canvas réagissant en temps réel aux fréquences audio. Elle intègre également une extraction dynamique de palettes de couleurs à partir des pochettes d'albums et une gestion de tracklists interactives.",
     "tags": ["Front", "Musique"],
@@ -234,5 +262,17 @@
       "live": "https://aserlite.github.io/armvr/"
     },
     "gallery": ["/images/projects/armvr2.png", "/images/projects/armvr3.png"]
+  },
+  {
+    "id": "123",
+    "title": "CivDot5",
+    "description": "Simulateur de civilisations intégrant génération procédurale, expansion territoriale et dynamiques de guerre. Développé avec React, Zustand et l'API Canvas pour un rendu graphique performant.",
+    "tags": ["Front"],
+    "coverImage": "/images/projects/civdot5.png",
+    "links": {
+      "github": "https://github.com/aserlite/civdot5",
+      "live": "https://aserlite.github.io/civdot5/"
+    },
+    "gallery": []
   }
 ]
