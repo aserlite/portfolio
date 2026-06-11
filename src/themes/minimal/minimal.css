@@ -1,0 +1,41 @@
+/* ============================================================
+    Thème minimal
+   ============================================================ */
+
+.theme-minimal {
+  background: #000;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  --portrait-radius: 0px;
+  --portrait-overlay-bg: transparent;
+  --portrait-overlay-blend: normal;
+  --portrait-overlay-opacity: 0;
+  --btn-radius: 0px;
+  --btn-primary-bg: #f0f0f0;
+  --btn-primary-color: #000;
+  --btn-primary-border: none;
+  --btn-primary-shadow: none;
+  --btn-primary-backdrop: none;
+
+  --btn-primary-hover-bg: #fff;
+  --btn-primary-hover-color: #000;
+  --btn-primary-hover-shadow: none;
+  --btn-primary-hover-transform: none;
+
+  --btn-ghost-bg: transparent;
+  --btn-ghost-color: #f0f0f0;
+  --btn-ghost-border: 1px solid #f0f0f0;
+  --btn-ghost-shadow: none;
+  --btn-ghost-backdrop: none;
+
+  --btn-ghost-hover-bg: transparent;
+  --btn-ghost-hover-color: #fff;
+  --btn-ghost-hover-border: 1px solid #fff;
+  --btn-ghost-hover-shadow: none;
+  --btn-ghost-hover-transform: none;
+
+  --nav-bg: rgba(0, 0, 0, 0.95);
+}

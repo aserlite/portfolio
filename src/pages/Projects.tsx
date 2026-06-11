@@ -107,7 +107,16 @@ export default function Projects() {
 
   // Catégories dérivées des tags du JSON
   const categories = ['Tous', ...Array.from(new Set(allProjects.flatMap((p) => p.tags)))];
-  const [activeFilter, setActiveFilter] = useState('Tous');
+
+  // Filtre persistant : restauré depuis sessionStorage au retour sur la page
+  const [activeFilter, setActiveFilter] = useState<string>(() => {
+    return sessionStorage.getItem('projects-filter') ?? 'Tous';
+  });
+
+  const handleFilter = (cat: string) => {
+    setActiveFilter(cat);
+    sessionStorage.setItem('projects-filter', cat);
+  };
 
   const filtered =
     activeFilter === 'Tous'
@@ -128,7 +137,7 @@ export default function Projects() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveFilter(cat)}
+              onClick={() => handleFilter(cat)}
               className={`${styles.filterBtn}${activeFilter === cat ? ` ${styles.filterBtnActive}` : ''}`}
             >
               {cat}

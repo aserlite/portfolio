@@ -16,7 +16,7 @@ const PASSIONS: Passion[] = [
   { id: 1, label: 'Musique / DJ', image: '/images/dj.jpg' },
   { id: 2, label: 'Développement', image: '/images/web.png' },
   { id: 3, label: 'Voitures', image: '/images/car.jpg' },
-  { id: 4, label: 'Cinéma', image: '/images/projects/banane.png' },
+  { id: 4, label: 'Tatouage', image: '/images/placeholder.jpg' },
 ];
 
 export default function Me() {

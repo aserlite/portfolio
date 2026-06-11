@@ -92,7 +92,8 @@ export default function FluidBackground({ isDiscreet = false }: { isDiscreet?: b
         opacity: isDiscreet ? 0.35 : 1,
         transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
       }}>
-        <Canvas>
+        {/* frameloop="demand" stoppe la boucle de rendu quand le fond est en arrière-plan */}
+        <Canvas frameloop={isDiscreet ? 'demand' : 'always'}>
           <FluidShader />
         </Canvas>
       </div>
