@@ -1,4 +1,5 @@
-import { useRef, useMemo, MutableRefObject } from 'react';
+import { useRef, useState } from 'react';
+import type { MutableRefObject } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
 import * as THREE from 'three';
@@ -93,26 +94,30 @@ function Car({ id, lane, targetSpeed, startZ, color, carsState }: CarProps) {
   );
 }
 
-function Traffic() {
-  const cars = useMemo(() => {
-    const items = [];
-    const colors = ['#ffffff', '#ff3333', '#3366ff', '#ffcc00', '#00ff88', '#aaaaaa'];
+type CarData = { id: number; lane: number; targetSpeed: number; startZ: number; color: string };
+
+function generateCars() {
+  const items: CarData[] = [];
+  const colors = ['#ffffff', '#ff3333', '#3366ff', '#ffcc00', '#00ff88', '#aaaaaa'];
+  
+  for (let i = 0; i < 10; i++) {
+    const lane = Math.floor(Math.random() * 3) - 1;
+    const carsInLane = items.filter(c => c.lane === lane);
+    const maxZ = carsInLane.length > 0 ? Math.max(...carsInLane.map(c => c.startZ)) : -30;
     
-    for (let i = 0; i < 10; i++) {
-      const lane = Math.floor(Math.random() * 3) - 1;
-      const carsInLane = items.filter(c => c.lane === lane);
-      const maxZ = carsInLane.length > 0 ? Math.max(...carsInLane.map(c => c.startZ)) : -30;
-      
-      items.push({
-        id: i,
-        lane,
-        targetSpeed: 1 + Math.random() * 1.5,
-        startZ: maxZ + 6 + Math.random() * 4,
-        color: colors[Math.floor(Math.random() * colors.length)],
-      });
-    }
-    return items;
-  }, []);
+    items.push({
+      id: i,
+      lane,
+      targetSpeed: 1 + Math.random() * 1.5,
+      startZ: maxZ + 6 + Math.random() * 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+    });
+  }
+  return items;
+}
+
+function Traffic() {
+  const [cars] = useState(generateCars);
 
   const carsState = useRef(
     cars.map(c => ({ id: c.id, lane: c.lane, z: c.startZ, actualSpeed: c.targetSpeed }))
