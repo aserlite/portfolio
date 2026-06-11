@@ -5,7 +5,7 @@
     "date": "2026",
     "category": "Expérience",
     "title": "ISPGAYA",
-    "description": "Stage 3 mois au sein de l'équipe de communication de l'institut supérieur polytechnique de Gaia, missions de communication et de développement web"
+    "description": "Stage de 3 mois au sein de l'équipe de communication de l'Institut Supérieur Polytechnique de Gaia (Portugal). Missions de communication institutionnelle, création de contenus visuels et développement web."
   },
   {
     "id": "1",
@@ -13,39 +13,39 @@
     "date": "2016",
     "category": "Expérience",
     "title": "Somfy",
-    "description": "Stage 3eme"
+    "description": "Stage de 3ème au sein du groupe Somfy, spécialiste mondial de l'automatisation des ouvertures et fermetures de bâtiments. Découverte du monde de l'entreprise et des systèmes domotiques."
   },
   {
     "id": "2",
     "year": "2017",
     "date": "2017",
     "category": "Expérience",
-    "title": "Sopra",
-    "description": "Stage 2nd"
+    "title": "Sopra Steria",
+    "description": "Stage de 2nde au sein du groupe Sopra Steria, leader européen de la transformation numérique. Immersion dans un environnement de conseil et de services informatiques à grande échelle."
   },
   {
     "id": "3",
     "year": "2020",
     "date": "2017 — 2020",
     "category": "Diplôme",
-    "title": "Bac S SI",
-    "description": "Spe ISN"
+    "title": "Bac S — Sciences de l'Ingénieur",
+    "description": "Baccalauréat Scientifique option Sciences de l'Ingénieur, spécialité ISN (Informatique et Sciences du Numérique). Bases en algorithmique, programmation et systèmes physiques."
   },
   {
     "id": "4",
     "year": "2021",
     "date": "2020 — 2021",
     "category": "Diplôme",
-    "title": "IG2I",
-    "description": "école ingenieur de Centrale Lille"
+    "title": "IG2I — Centrale Lille",
+    "description": "Première année en école d'ingénieurs IG2I (Institut des Sciences et Techniques de l'Ingénieur) affiliée à Centrale Lille, avant réorientation vers la filière créative MMI."
   },
   {
     "id": "5",
     "year": "2024",
     "date": "2021 — 2024",
     "category": "Diplôme",
-    "title": "BUT MMI",
-    "description": "BUT MMI à Lens spe web"
+    "title": "BUT MMI — Spé Web",
+    "description": "Bachelor Universitaire de Technologie Métiers du Multimédia et de l'Internet à l'IUT de Lens, spécialisation Développement Web. Formation couvrant le développement front/back, l'UX/UI, la communication et la production audiovisuelle."
   },
   {
     "id": "6",
@@ -53,78 +53,78 @@
     "date": "2023",
     "category": "Expérience",
     "title": "Amphibee",
-    "description": "Stage - dev back"
+    "description": "Stage développeur back-end au sein de l'agence web Amphibee. Développement d'applications Laravel, gestion de bases de données et intégration d'APIs."
   },
   {
     "id": "50",
     "year": "2023",
     "date": "2023",
     "category": "Diplôme",
-    "title": "ISPGAYA",
-    "description": "Semestre Erasmus au Portugal au sein de l'institut supérieur polytechnique de Gaia"
+    "title": "Erasmus — ISPGAYA, Portugal",
+    "description": "Semestre Erasmus à l'Institut Supérieur Polytechnique de Gaia (Porto, Portugal). Projets internationaux, cours en anglais, immersion culturelle et développement d'une vision globale du numérique."
   },
   {
     "id": "7",
     "year": "2024",
     "date": "2023 — 2024",
     "category": "Expérience",
-    "title": "Amphibee",
-    "description": "Alternance - dev back"
+    "title": "Amphibee — Alternance",
+    "description": "Alternance développeur back-end chez Amphibee en parallèle de la 3ème année de BUT MMI. Développement de fonctionnalités complètes en Laravel, gestion de projets clients et travail en équipe agile."
   },
   {
     "id": "8",
     "year": "2027",
     "date": "2024 — 2027",
     "category": "Diplôme",
-    "title": "IMAC",
-    "description": "Filière ingenieur ESIEE"
+    "title": "Diplôme d'Ingénieur — IMAC, ESIEE Paris",
+    "description": "Cursus ingénieur IMAC (Image, Multimédia, Audiovisuel, Communication) à ESIEE Paris. Formation à l'intersection du génie informatique, du traitement d'image, de la 3D temps réel et de la communication créative."
   },
   {
     "id": "9",
     "year": "2026",
     "date": "2025 — 2026",
     "category": "Associatif",
-    "title": "Groupe des ingénieurs créatifs",
-    "description": "Vice président"
+    "title": "Groupe des Ingénieurs Créatifs",
+    "description": "Vice-président du GIC (Groupe des Ingénieurs Créatifs) à ESIEE Paris. Organisation d'événements, animation de la communauté IMAC et coordination des projets créatifs inter-promotions."
   },
   {
     "id": "10",
     "year": "2026",
     "date": "2025 — 2026",
     "category": "Associatif",
-    "title": "Club DJ",
-    "description": "Responsable communication"
+    "title": "Club DJ — La Sono ESIEE",
+    "description": "Responsable communication du club DJ de l'ESIEE Paris. Création de l'identité visuelle du club, gestion des réseaux sociaux, organisation de soirées et production de contenus photo/vidéo."
   },
   {
     "id": "11",
     "year": "2026",
     "date": "2025 — 2026",
     "category": "Associatif",
-    "title": "Bureau des sports",
-    "description": "Pôle communication"
+    "title": "Bureau des Sports",
+    "description": "Pôle communication du Bureau des Sports de l'ESIEE Paris. Création de supports visuels, communication des événements sportifs et promotion des activités sur les réseaux sociaux."
   },
   {
     "id": "12",
     "year": "2026",
     "date": "2025 — 2026",
     "category": "Associatif",
-    "title": "Bureau des élèves",
-    "description": "BDE Mystik - Pôle communication / Pôle évènementiel"
+    "title": "BDE Mystik",
+    "description": "Membre du Bureau des Étudiants Mystik de l'ESIEE Paris. Contribution au pôle communication (création de visuels, gestion réseaux) et au pôle événementiel (organisation et logistique de soirées et activités)."
   },
   {
     "id": "14",
     "year": "2027",
     "date": "2026 — 2027",
     "category": "Associatif",
-    "title": "Bureau des élèves",
-    "description": "BDE Azur -Pôle évènementiel"
+    "title": "BDE Azur",
+    "description": "Membre du Bureau des Étudiants Azur de l'ESIEE Paris au sein du pôle événementiel. Participation à l'organisation et la logistique des événements de la vie étudiante."
   },
   {
     "id": "15",
     "year": "2027",
     "date": "2026 — 2027",
     "category": "Associatif",
-    "title": "Club DJ",
-    "description": "Président"
+    "title": "Club DJ — La Sono ESIEE",
+    "description": "Président du club DJ La Sono de l'ESIEE Paris. Direction du bureau, développement du club, programmation artistique des soirées et représentation auprès de l'école."
   }
 ]

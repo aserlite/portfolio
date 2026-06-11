@@ -1,3 +1,4 @@
+import { usePageMeta } from '../hooks/usePageMeta';
 import styles from '../styles/pages/Contact.module.css';
 
 const EMAIL = 'arthurcuvillon691@gmail.com';
@@ -9,6 +10,12 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Contact() {
+  usePageMeta({
+    title: 'Contact',
+    description:
+      'Contactez Arthur Cuvillon par email ou retrouvez-le sur GitHub, LinkedIn et Instagram.',
+  });
+
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.inner}>

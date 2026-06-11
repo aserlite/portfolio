@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
-export const THEMES = ['fluid', 'minimal', 'blueprint', 'ascii', 'lidar'] as const;
+export const THEMES = ['fluid', 'blueprint', 'ascii', 'lidar'] as const;
 export type Theme = typeof THEMES[number];
 
 interface ThemeContextType {

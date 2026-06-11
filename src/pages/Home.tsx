@@ -1,9 +1,16 @@
 import TypingText from '../components/TypingText';
 import { Link } from 'react-router-dom';
 import { getImageUrl } from '../utils/assetUtils';
+import { usePageMeta } from '../hooks/usePageMeta';
 import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
+  usePageMeta({
+    title: 'Arthur Cuvillon — Portfolio',
+    description:
+      "Développeur créatif, ingénieur IMAC ESIEE Paris. Projets web, mobile, WebGL, court-métrages et communication.",
+  });
+
   return (
     <section id="accueil" className={styles.hero}>
       <div className={styles.inner}>

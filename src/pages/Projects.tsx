@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { projectService } from '../services/projectService';
 import { getImageUrl } from '../utils/assetUtils';
 import type { Project } from '../types/Project';
+import { usePageMeta } from '../hooks/usePageMeta';
 import styles from '../styles/pages/Projects.module.css';
 
 function Separator() {
@@ -97,6 +98,12 @@ function ProjectRow({ project, index }: RowProps) {
 
 export default function Projects() {
   const allProjects = projectService.getAllProjects();
+
+  usePageMeta({
+    title: 'Projets',
+    description:
+      'Découvrez les projets web, mobile, vidéo et communication réalisés par Arthur Cuvillon.',
+  });
 
   // Catégories dérivées des tags du JSON
   const categories = ['Tous', ...Array.from(new Set(allProjects.flatMap((p) => p.tags)))];

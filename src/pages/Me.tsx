@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMousePosition } from '../hooks/useMousePosition';
 import { getImageUrl } from '../utils/assetUtils';
+import { usePageMeta } from '../hooks/usePageMeta';
 import ExperienceList from '../components/ExperienceList';
 import styles from '../styles/pages/Me.module.css';
 
@@ -15,13 +16,19 @@ const PASSIONS: Passion[] = [
   { id: 1, label: 'Musique / DJ', image: '/images/dj.jpg' },
   { id: 2, label: 'Développement', image: '/images/web.png' },
   { id: 3, label: 'Voitures', image: '/images/car.jpg' },
-  { id: 4, label: 'Tatouage', image: '/images/placeholder.jpg' },
+  { id: 4, label: 'Cinéma', image: '/images/projects/banane.png' },
 ];
 
 export default function Me() {
   const [hoveredPassion, setHoveredPassion] = useState<Passion | null>(null);
   const [randomRotation, setRandomRotation] = useState<number>(0);
   const { x, y } = useMousePosition();
+
+  usePageMeta({
+    title: 'Moi',
+    description:
+      'Arthur Cuvillon — Développeur créatif, DJ, photographe et passionné de cinéma. En cursus ingénieur IMAC à ESIEE Paris.',
+  });
 
   return (
     <section id="moi" className={styles.section}>

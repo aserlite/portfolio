@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { projectService } from '../services/projectService';
 import { getImageUrl } from '../utils/assetUtils';
+import { usePageMeta } from '../hooks/usePageMeta';
 import ProjectDetailHeader from '../components/Project/ProjectDetailHeader';
 import ProjectDetailCover from '../components/Project/ProjectDetailCover';
 import ProjectDetailContent from '../components/Project/ProjectDetailContent';
@@ -13,6 +14,15 @@ export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
   const [activeImage, setActiveImage] = useState<string | null>(null);
   
+  const project = id ? projectService.getProjectById(id) : undefined;
+
+  usePageMeta({
+    title: project ? project.title : 'Projet',
+    description: project
+      ? project.description.slice(0, 160)
+      : 'Détail du projet.',
+  });
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -39,7 +49,6 @@ export default function ProjectDetail() {
   }, [activeImage]);
 
   if (!id) return null;
-  const project = projectService.getProjectById(id);
 
   if (!project) {
     return (
