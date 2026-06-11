@@ -5,6 +5,7 @@ import FluidBackground from '../themes/fluid/FluidBackground';
 import BlueprintBackground from '../themes/blueprint/BlueprintBackground';
 import AsciiBackground from '../themes/ascii/AsciiBackground';
 import LidarBackground from '../themes/lidar/LidarBackground';
+import HighwayBackground from '../themes/highway/HighwayBackground';
 
 export default function MainLayout() {
   const { theme } = useTheme();
@@ -21,6 +22,7 @@ export default function MainLayout() {
       {theme === 'blueprint' && <BlueprintBackground />}
       {theme === 'ascii' && <AsciiBackground isDiscreet={isDiscreet} />}
       {theme === 'lidar' && <LidarBackground />}
+      {theme === 'highway' && <HighwayBackground />}
       <Navigation />
       <main className="main-content">
         <Outlet />

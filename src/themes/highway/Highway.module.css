@@ -1,0 +1,33 @@
+.highwayForceBundle {
+  --portrait-radius: 4px;
+  --portrait-overlay-bg: linear-gradient(135deg, rgba(255, 60, 0, 0.4), rgba(20, 20, 30, 0.8));
+  --portrait-overlay-blend: overlay;
+  --portrait-overlay-opacity: 0.8;
+
+  --btn-radius: 4px;
+  
+  --btn-primary-bg: #1a1a1a;
+  --btn-primary-color: #ff4500;
+  --btn-primary-border: 1px solid #ff4500;
+  --btn-primary-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+  --btn-primary-backdrop: none;
+
+  --btn-primary-hover-bg: #ff4500;
+  --btn-primary-hover-color: #0a0a0a;
+  --btn-primary-hover-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+  --btn-primary-hover-transform: translateY(-2px);
+
+  --btn-ghost-bg: transparent;
+  --btn-ghost-color: #f0f0f0;
+  --btn-ghost-border: 1px solid rgba(240, 240, 240, 0.2);
+  --btn-ghost-shadow: none;
+  --btn-ghost-backdrop: none;
+
+  --btn-ghost-hover-bg: rgba(255, 255, 255, 0.05);
+  --btn-ghost-hover-color: #ffffff;
+  --btn-ghost-hover-border: 1px solid rgba(240, 240, 240, 0.5);
+  --btn-ghost-hover-shadow: none;
+  --btn-ghost-hover-transform: translateY(-2px);
+  
+  color: #e0e0e0;
+}
