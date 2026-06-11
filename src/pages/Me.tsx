@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMousePosition } from '../hooks/useMousePosition';
 import { getImageUrl } from '../utils/assetUtils';
+import ExperienceList from '../components/ExperienceList';
 import styles from '../styles/pages/Me.module.css';
 
 interface Passion {
@@ -52,6 +53,8 @@ export default function Me() {
         <p className={styles.outro}>
           J'en ai pas dit assez ? Pas de problème, <Link to="/contact" className={styles.outroLink}>viens m'en parler directement</Link>.
         </p>
+        
+        <ExperienceList />
 
       </div>
 

@@ -1,0 +1,123 @@
+[
+  {
+    "type": "header",
+    "version": "5.2.0",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+  },
+  { "type": "database", "name": "db" },
+  {
+    "type": "table",
+    "name": "experiences",
+    "database": "db",
+    "data": [
+      {
+        "id": "1",
+        "title": "BUT MMI",
+        "description": "BUT MMI à Lens spe web",
+        "start_year": "2021",
+        "end_year": "2024",
+        "created_at": "2024-09-16 13:52:53",
+        "updated_at": "2024-09-16 13:52:53"
+      },
+      {
+        "id": "2",
+        "title": "IMAC",
+        "description": "Filière ingenieur ESIEE",
+        "start_year": "2024",
+        "end_year": "2027",
+        "created_at": "2024-09-16 13:53:02",
+        "updated_at": "2024-09-16 13:53:02"
+      },
+      {
+        "id": "3",
+        "title": "IG2I",
+        "description": "école ingenieur de Centrale Lille",
+        "start_year": "2020",
+        "end_year": "2021",
+        "created_at": "2024-09-16 13:53:15",
+        "updated_at": "2024-09-16 13:53:15"
+      },
+      {
+        "id": "4",
+        "title": "Amphibee",
+        "description": "Alternance - dev back",
+        "start_year": "2023",
+        "end_year": "2024",
+        "created_at": "2024-09-16 13:53:31",
+        "updated_at": "2024-09-16 13:53:31"
+      },
+      {
+        "id": "5",
+        "title": "Amphibee",
+        "description": "Stage - dev back",
+        "start_year": "2023",
+        "end_year": null,
+        "created_at": "2024-09-16 13:54:04",
+        "updated_at": "2024-09-16 13:54:04"
+      },
+      {
+        "id": "6",
+        "title": "Bac S SI",
+        "description": "Spe ISN",
+        "start_year": "2017",
+        "end_year": "2020",
+        "created_at": "2024-09-16 13:55:16",
+        "updated_at": "2024-09-16 13:55:16"
+      },
+      {
+        "id": "7",
+        "title": "Somfy",
+        "description": "Stage 3eme",
+        "start_year": "2016",
+        "end_year": null,
+        "created_at": "2024-09-16 13:56:45",
+        "updated_at": "2024-09-16 13:56:45"
+      },
+      {
+        "id": "8",
+        "title": "Sopra",
+        "description": "Stage 2nd",
+        "start_year": "2017",
+        "end_year": null,
+        "created_at": "2024-09-16 13:56:56",
+        "updated_at": "2024-09-16 13:56:56"
+      },
+      {
+        "id": "9",
+        "title": "Bureau des élèves",
+        "description": "Pôle évènementiel",
+        "start_year": "2025",
+        "end_year": "2026",
+        "created_at": "2024-09-16 13:56:56",
+        "updated_at": "2024-09-16 13:56:56"
+      },
+      {
+        "id": "10",
+        "title": "Bureau des sports",
+        "description": "Pôle communication",
+        "start_year": "2025",
+        "end_year": "2026",
+        "created_at": "2024-09-16 13:56:56",
+        "updated_at": "2024-09-16 13:56:56"
+      },
+      {
+        "id": "11",
+        "title": "Club DJ",
+        "description": "Responsable communication",
+        "start_year": "2025",
+        "end_year": "2026",
+        "created_at": "2024-09-16 13:56:56",
+        "updated_at": "2024-09-16 13:56:56"
+      },
+      {
+        "id": "12",
+        "title": "Groupe des ingénieurs créatifs",
+        "description": "Vice président",
+        "start_year": "2025",
+        "end_year": "2026",
+        "created_at": "2024-09-16 13:56:56",
+        "updated_at": "2024-09-16 13:56:56"
+      }
+    ]
+  }
+]

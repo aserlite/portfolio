@@ -1,0 +1,130 @@
+[
+  {
+    "id": "13",
+    "year": "2026",
+    "date": "2026",
+    "category": "Expérience",
+    "title": "ISPGAYA",
+    "description": "Stage 3 mois au sein de l'équipe de communication de l'institut supérieur polytechnique de Gaia, missions de communication et de développement web"
+  },
+  {
+    "id": "1",
+    "year": "2016",
+    "date": "2016",
+    "category": "Expérience",
+    "title": "Somfy",
+    "description": "Stage 3eme"
+  },
+  {
+    "id": "2",
+    "year": "2017",
+    "date": "2017",
+    "category": "Expérience",
+    "title": "Sopra",
+    "description": "Stage 2nd"
+  },
+  {
+    "id": "3",
+    "year": "2020",
+    "date": "2017 — 2020",
+    "category": "Diplôme",
+    "title": "Bac S SI",
+    "description": "Spe ISN"
+  },
+  {
+    "id": "4",
+    "year": "2021",
+    "date": "2020 — 2021",
+    "category": "Diplôme",
+    "title": "IG2I",
+    "description": "école ingenieur de Centrale Lille"
+  },
+  {
+    "id": "5",
+    "year": "2024",
+    "date": "2021 — 2024",
+    "category": "Diplôme",
+    "title": "BUT MMI",
+    "description": "BUT MMI à Lens spe web"
+  },
+  {
+    "id": "6",
+    "year": "2023",
+    "date": "2023",
+    "category": "Expérience",
+    "title": "Amphibee",
+    "description": "Stage - dev back"
+  },
+  {
+    "id": "50",
+    "year": "2023",
+    "date": "2023",
+    "category": "Diplôme",
+    "title": "ISPGAYA",
+    "description": "Semestre Erasmus au Portugal au sein de l'institut supérieur polytechnique de Gaia"
+  },
+  {
+    "id": "7",
+    "year": "2024",
+    "date": "2023 — 2024",
+    "category": "Expérience",
+    "title": "Amphibee",
+    "description": "Alternance - dev back"
+  },
+  {
+    "id": "8",
+    "year": "2027",
+    "date": "2024 — 2027",
+    "category": "Diplôme",
+    "title": "IMAC",
+    "description": "Filière ingenieur ESIEE"
+  },
+  {
+    "id": "9",
+    "year": "2026",
+    "date": "2025 — 2026",
+    "category": "Associatif",
+    "title": "Groupe des ingénieurs créatifs",
+    "description": "Vice président"
+  },
+  {
+    "id": "10",
+    "year": "2026",
+    "date": "2025 — 2026",
+    "category": "Associatif",
+    "title": "Club DJ",
+    "description": "Responsable communication"
+  },
+  {
+    "id": "11",
+    "year": "2026",
+    "date": "2025 — 2026",
+    "category": "Associatif",
+    "title": "Bureau des sports",
+    "description": "Pôle communication"
+  },
+  {
+    "id": "12",
+    "year": "2026",
+    "date": "2025 — 2026",
+    "category": "Associatif",
+    "title": "Bureau des élèves",
+    "description": "BDE Mystik - Pôle communication / Pôle évènementiel"
+  },
+  {
+    "id": "14",
+    "year": "2027",
+    "date": "2026 — 2027",
+    "category": "Associatif",
+    "title": "Bureau des élèves",
+    "description": "BDE Azur -Pôle évènementiel"
+  },
+  {
+    "id": "15",
+    "year": "2027",
+    "date": "2026 — 2027",
+    "category": "Associatif",
+    "title": "Club DJ",
+    "description": "Président"
+  }
+]
