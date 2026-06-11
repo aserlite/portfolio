@@ -9,10 +9,10 @@ import LidarBackground from '../themes/lidar/LidarBackground';
 export default function MainLayout() {
   const { theme } = useTheme();
   const location = useLocation();
-  
-  const isDiscreet = 
-    location.pathname.startsWith('/projects') || 
-    location.pathname.startsWith('/project') || 
+
+  const isDiscreet =
+    location.pathname.startsWith('/projects') ||
+    location.pathname.startsWith('/project') ||
     location.pathname.startsWith('/me');
 
   return (
@@ -28,3 +28,4 @@ export default function MainLayout() {
     </div>
   );
 }
+

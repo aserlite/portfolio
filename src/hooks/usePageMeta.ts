@@ -9,7 +9,6 @@ const BASE_TITLE = 'Arthur Cuvillon — Portfolio';
 const BASE_DESCRIPTION =
   "Portfolio d'Arthur Cuvillon — Développeur créatif, IMAC ESIEE Paris. Projets web, mobile, WebGL, court-métrages et communication.";
 
-/** Met à jour le <title> et les balises meta/OG dynamiquement à chaque changement de page. */
 export function usePageMeta({ title, description }: PageMetaOptions): void {
   useEffect(() => {
     const fullTitle = title === BASE_TITLE ? title : `${title} — ${BASE_TITLE}`;

@@ -1,17 +1,21 @@
+import { useMemo } from 'react';
 import experiencesData from '../assets/data/experiences.json';
 import type { Experience } from '../types/Experience';
 import styles from '../styles/components/ExperienceList.module.css';
 
 export default function ExperienceList() {
-  const grouped = (experiencesData as Experience[]).reduce((acc, exp) => {
-    if (!acc[exp.year]) {
-      acc[exp.year] = [];
-    }
-    acc[exp.year].push(exp);
-    return acc;
-  }, {} as Record<string, Experience[]>);
-
-  const sortedYears = Object.keys(grouped).sort((a, b) => parseInt(b) - parseInt(a));
+  const { grouped, sortedYears } = useMemo(() => {
+    const grouped = (experiencesData as Experience[]).reduce(
+      (acc, exp) => {
+        if (!acc[exp.year]) acc[exp.year] = [];
+        acc[exp.year].push(exp);
+        return acc;
+      },
+      {} as Record<string, Experience[]>,
+    );
+    const sortedYears = Object.keys(grouped).sort((a, b) => parseInt(b) - parseInt(a));
+    return { grouped, sortedYears };
+  }, []);
 
   return (
     <div className={styles.container}>

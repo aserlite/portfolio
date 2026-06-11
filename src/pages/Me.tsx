@@ -16,7 +16,7 @@ const PASSIONS: Passion[] = [
   { id: 1, label: 'Musique / DJ', image: '/images/dj.jpg' },
   { id: 2, label: 'Développement', image: '/images/web.png' },
   { id: 3, label: 'Voitures', image: '/images/car.jpg' },
-  { id: 4, label: 'Tatouage', image: '/images/placeholder.jpg' },
+  { id: 4, label: 'Tatouage', image: '/images/tattoo.jpg' },
 ];
 
 export default function Me() {
@@ -34,7 +34,7 @@ export default function Me() {
     <section id="moi" className={styles.section}>
       <div className={styles.inner}>
         <h1 className={styles.heading}>Moi ?</h1>
-        
+
         <p className={styles.intro}>
           J'aime bien plein de trucs et peut etre que ca t'aidera a comprendre un peu qui je suis
         </p>
@@ -58,26 +58,30 @@ export default function Me() {
         </div>
 
         <p className={styles.outro}>
-          J'en ai pas dit assez ? Pas de problème, <Link to="/contact" className={styles.outroLink}>viens m'en parler directement</Link>.
+          J'en ai pas dit assez ? Pas de problème,{' '}
+          <Link to="/contact" className={styles.outroLink}>
+            viens m'en parler directement
+          </Link>
+          .
         </p>
-        
-        <ExperienceList />
 
+        <ExperienceList />
       </div>
 
-      <div 
+      <div
         className={`${styles.floatingImageContainer} ${hoveredPassion ? styles.floatingImageVisible : ''}`}
         style={{ transform: `translate3d(${x}px, ${y}px, 0) rotate(${randomRotation}deg)` }}
         aria-hidden="true"
       >
         {hoveredPassion && (
-          <img 
-            src={getImageUrl(hoveredPassion.image)} 
-            alt={hoveredPassion.label} 
-            className={styles.floatingImage} 
+          <img
+            src={getImageUrl(hoveredPassion.image)}
+            alt={hoveredPassion.label}
+            className={styles.floatingImage}
           />
         )}
       </div>
     </section>
   );
 }
+

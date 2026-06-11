@@ -1,13 +1,12 @@
 import styles from '../../styles/components/DescriptionFormatter.module.css';
 
+type TextBlock = { type: 'lead' | 'paragraph'; content: string };
+type ListBlock = { type: 'list'; content: ListItem[] };
+type Block = TextBlock | ListBlock;
+
 interface ListItem {
   key: string;
   value: string;
-}
-
-interface Block {
-  type: 'lead' | 'paragraph' | 'list';
-  content: string | ListItem[];
 }
 
 interface DescriptionFormatterProps {
@@ -56,21 +55,21 @@ export default function DescriptionFormatter({ description }: DescriptionFormatt
           case 'lead':
             return (
               <p key={blockIndex} className={styles.lead}>
-                {block.content as string}
+                {block.content}
               </p>
             );
 
           case 'paragraph':
             return (
               <p key={blockIndex} className={styles.paragraph}>
-                {block.content as string}
+                {block.content}
               </p>
             );
 
           case 'list':
             return (
               <ul key={blockIndex} className={styles.listContainer}>
-                {(block.content as ListItem[]).map((item, itemIndex) => (
+                {block.content.map((item, itemIndex) => (
                   <li key={itemIndex} className={styles.listItem}>
                     <span className={styles.keyBadge}>{item.key}</span>
                     <p className={styles.valueText}>{item.value}</p>

@@ -9,7 +9,6 @@ export function useMousePosition() {
     const updateMousePosition = (e: MouseEvent) => {
       pending.current = { x: e.clientX, y: e.clientY };
 
-      // Un seul setState par frame, pas un par pixel
       if (rafId.current === null) {
         rafId.current = requestAnimationFrame(() => {
           setMousePosition({ ...pending.current });
@@ -28,3 +27,4 @@ export function useMousePosition() {
 
   return mousePosition;
 }
+

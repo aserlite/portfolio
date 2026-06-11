@@ -9,15 +9,15 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Projets',  to: '/projects' },
-  { label: 'Moi',     to: '/me' },
+  { label: 'Projets', to: '/projects' },
+  { label: 'Moi', to: '/me' },
   { label: 'Contact', to: '/contact' },
 ];
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled]   = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const { theme, toggleTheme }         = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -25,10 +25,11 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Bloque le scroll du body quand le menu mobile est ouvert
   useEffect(() => {
     document.body.style.overflow = isMobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isMobileOpen]);
 
   return (
@@ -39,7 +40,6 @@ export default function Navigation() {
             AC<span className={styles.logoDot}>.</span>
           </Link>
 
-          {/* Liens desktop */}
           <div className={styles.links}>
             {NAV_ITEMS.map((item) => (
               <NavLink
@@ -57,7 +57,6 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Hamburger mobile */}
           <button
             className={`${styles.hamburger}${isMobileOpen ? ` ${styles.hamburgerOpen}` : ''}`}
             onClick={() => setIsMobileOpen((v) => !v)}
@@ -71,7 +70,6 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Overlay mobile */}
       <div
         className={`${styles.mobile}${isMobileOpen ? ` ${styles.mobileVisible}` : ''}`}
         aria-hidden={!isMobileOpen}
@@ -88,8 +86,8 @@ export default function Navigation() {
               {item.label}
             </NavLink>
           ))}
-          <button 
-            onClick={toggleTheme} 
+          <button
+            onClick={toggleTheme}
             className={styles.themeBtnMobile}
             style={{ animationDelay: `${NAV_ITEMS.length * 0.08}s` }}
           >

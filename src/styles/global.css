@@ -1,12 +1,5 @@
-/* ============================================================
-   global.css — Reset, Polices, Conteneur racine
-   NE PAS ajouter de styles de composants ou de pages ici.
-   ============================================================ */
-
-/* ── Google Fonts ── */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-/* ── Reset ── */
 *,
 *::before,
 *::after {
@@ -15,7 +8,6 @@
   padding: 0;
 }
 
-/* ── Base ── */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -45,47 +37,12 @@ video {
   max-width: 100%;
 }
 
-/* ── Thèmes des boutons ── */
-:root {
-  /* Theme Classic (Par défaut) — Brutaliste, sans arrondi */
-  --portrait-radius: 0px;
-  --portrait-overlay-bg: transparent;
-  --portrait-overlay-blend: normal;
-  --portrait-overlay-opacity: 0;
-
-  --btn-radius: 0px;
-  --btn-primary-bg: #f0f0f0;
-  --btn-primary-color: #0a0a0a;
-  --btn-primary-border: 1px solid transparent;
-  --btn-primary-shadow: none;
-  --btn-primary-backdrop: none;
-  
-  --btn-primary-hover-bg: #e0e0e0;
-  --btn-primary-hover-color: #0a0a0a;
-  --btn-primary-hover-shadow: none;
-  --btn-primary-hover-transform: translateY(-2px);
-  
-  --btn-ghost-bg: transparent;
-  --btn-ghost-color: #f0f0f0;
-  --btn-ghost-border: 1px solid rgba(240, 240, 240, 0.25);
-  --btn-ghost-shadow: none;
-  --btn-ghost-backdrop: none;
-  
-  --btn-ghost-hover-bg: transparent;
-  --btn-ghost-hover-color: #f0f0f0;
-  --btn-ghost-hover-border: 1px solid rgba(240, 240, 240, 0.6);
-  --btn-ghost-hover-shadow: none;
-  --btn-ghost-hover-transform: translateY(-2px);
-}
-
-/* ── Racine React ── */
 #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ── Layout de l'application ── */
 .app-container {
   min-height: 100vh;
   display: flex;
@@ -97,7 +54,6 @@ video {
   width: 100%;
 }
 
-/* ── Utilitaire d'erreur (partagé) ── */
 .error-container {
   display: flex;
   flex-direction: column;

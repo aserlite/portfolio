@@ -1,17 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-/**
- * Composant utilitaire sans rendu visuel.
- * - Restaure la dernière route visitée au premier chargement.
- * - Sauvegarde et restaure la position de scroll par clé d'historique.
- */
 export default function RouteCache() {
   const location = useLocation();
   const navigate = useNavigate();
   const isFirstLoad = useRef(true);
 
-  // Restauration de la dernière route
   useEffect(() => {
     if (isFirstLoad.current) {
       const savedPath = localStorage.getItem('lastPath');
@@ -24,7 +18,6 @@ export default function RouteCache() {
     }
   }, [location.pathname, navigate]);
 
-  // Restauration du scroll par entrée d'historique
   useEffect(() => {
     const savedScroll = sessionStorage.getItem(`scroll-${location.key}`);
     if (savedScroll) {
@@ -40,3 +33,4 @@ export default function RouteCache() {
 
   return null;
 }
+

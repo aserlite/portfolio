@@ -7,10 +7,10 @@ import styles from './Blueprint.module.css';
 function BlueprintGeometry() {
   const meshRef = useRef<THREE.Mesh>(null);
   const geomRef = useRef<THREE.IcosahedronGeometry>(null);
-  
+
   const intensityRef = useRef(0);
   const originalPositions = useRef<Float32Array | null>(null);
-  
+
   const mouse = useRef({ x: 0, y: 0 });
   const mouseSpeed = useRef(0);
   const lastMouse = useRef({ x: 0, y: 0 });
@@ -24,18 +24,18 @@ function BlueprintGeometry() {
     const handleMouseMove = (e: MouseEvent) => {
       const now = performance.now();
       const dt = Math.max(1, now - lastTime);
-      
+
       const nx = (e.clientX / window.innerWidth) * 2 - 1;
       const ny = -(e.clientY / window.innerHeight) * 2 + 1;
-      
+
       const dx = nx - lastMouse.current.x;
       const dy = ny - lastMouse.current.y;
-      
-      const speed = Math.sqrt(dx*dx + dy*dy) / (dt / 1000);
-      
+
+      const speed = Math.sqrt(dx * dx + dy * dy) / (dt / 1000);
+
       mouse.current = { x: nx, y: ny };
       mouseSpeed.current = Math.min(speed * 0.5, 1.5);
-      
+
       lastMouse.current = { x: nx, y: ny };
       lastTime = now;
     };
@@ -65,10 +65,11 @@ function BlueprintGeometry() {
         const x = orig[i];
         const y = orig[i + 1];
         const z = orig[i + 2];
-        
-        const offset = Math.sin(x * 5 + time * 5) * Math.cos(y * 5 + time * 4) * 0.4 * intensityRef.current;
-        
-        const length = Math.sqrt(x*x + y*y + z*z);
+
+        const offset =
+          Math.sin(x * 5 + time * 5) * Math.cos(y * 5 + time * 4) * 0.4 * intensityRef.current;
+
+        const length = Math.sqrt(x * x + y * y + z * z);
         const nx = x / length;
         const ny = y / length;
         const nz = z / length;
@@ -122,7 +123,17 @@ export default function BlueprintBackground() {
     <>
       <div ref={gridRef} className={styles.blueprintGrid} />
       {(isHome || isContact) && (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none' }}>
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1,
+            pointerEvents: 'none',
+          }}
+        >
           <Canvas camera={{ position: [0, 0, 5] }}>
             <BlueprintGeometry />
           </Canvas>
@@ -131,3 +142,4 @@ export default function BlueprintBackground() {
     </>
   );
 }
+

@@ -1,26 +1,15 @@
-/* ============================================================
-   classic.css — Thème par défaut (sombre / brutaliste)
-   
-   Ce fichier scope les tokens CSS et les styles structurels
-   sous .theme-classic. Les composants récupèrent les valeurs
-   via var() dans leurs CSS Modules respectifs.
-   ============================================================ */
-
 .theme-classic {
-  /* ── Background ── */
   background: linear-gradient(135deg, #171717 0%, #0a0a0a 100%);
   color: #f3f4f6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
-  /* ── Tokens portrait ── */
   --portrait-radius: 0px;
   --portrait-overlay-bg: transparent;
   --portrait-overlay-blend: normal;
   --portrait-overlay-opacity: 0;
 
-  /* ── Tokens bouton primaire ── */
   --btn-radius: 0px;
   --btn-primary-bg: #f0f0f0;
   --btn-primary-color: #0a0a0a;
@@ -33,7 +22,6 @@
   --btn-primary-hover-shadow: none;
   --btn-primary-hover-transform: translateY(-2px);
 
-  /* ── Tokens bouton fantôme ── */
   --btn-ghost-bg: transparent;
   --btn-ghost-color: #f0f0f0;
   --btn-ghost-border: 1px solid rgba(240, 240, 240, 0.25);
@@ -46,11 +34,9 @@
   --btn-ghost-hover-shadow: none;
   --btn-ghost-hover-transform: translateY(-2px);
 
-  /* ── Navigation ── */
   --nav-bg: rgba(10, 10, 10, 0.85);
 }
 
-/* Classe utilitaire d'erreur partagée (non-scopée CSS Modules) */
 .theme-classic .error-container {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 16px;

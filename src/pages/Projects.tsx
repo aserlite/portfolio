@@ -33,7 +33,6 @@ function ProjectRow({ project, index }: RowProps) {
       className={`${styles.row}${isReversed ? ` ${styles.rowReversed}` : ''}`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      {/* Image */}
       <div className={styles.imageWrap}>
         <div className={styles.imageRatio}>
           <img
@@ -44,23 +43,21 @@ function ProjectRow({ project, index }: RowProps) {
         </div>
       </div>
 
-      {/* Informations */}
       <div className={`${styles.info}${isReversed ? ` ${styles.infoRight}` : ''}`}>
         <h2 className={styles.rowTitle}>{project.title}</h2>
 
         <ul className={styles.tags}>
           {project.tags.map((tag) => (
-            <li key={tag} className={styles.tag}>{tag}</li>
+            <li key={tag} className={styles.tag}>
+              {tag}
+            </li>
           ))}
         </ul>
 
         <p className={styles.desc}>
           {displayText}
           {shouldTruncate && (
-            <Link
-              to={`/project/${project.id}`}
-              className={styles.seeMoreBtn}
-            >
+            <Link to={`/project/${project.id}`} className={styles.seeMoreBtn}>
               ... Voir plus
             </Link>
           )}
@@ -105,10 +102,8 @@ export default function Projects() {
       'Découvrez les projets web, mobile, vidéo et communication réalisés par Arthur Cuvillon.',
   });
 
-  // Catégories dérivées des tags du JSON
   const categories = ['Tous', ...Array.from(new Set(allProjects.flatMap((p) => p.tags)))];
 
-  // Filtre persistant : restauré depuis sessionStorage au retour sur la page
   const [activeFilter, setActiveFilter] = useState<string>(() => {
     return sessionStorage.getItem('projects-filter') ?? 'Tous';
   });
@@ -132,7 +127,6 @@ export default function Projects() {
           <span className={styles.headingAccent}>Sélectionnés</span>
         </h1>
 
-        {/* Barre de filtre */}
         <div className={styles.filters} role="group" aria-label="Filtrer les projets">
           {categories.map((cat) => (
             <button
@@ -145,7 +139,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Liste zigzag */}
         <div>
           {filtered.map((project, i) => (
             <div key={project.id}>
@@ -158,3 +151,4 @@ export default function Projects() {
     </section>
   );
 }
+

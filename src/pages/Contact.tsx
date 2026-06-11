@@ -4,8 +4,8 @@ import styles from '../styles/pages/Contact.module.css';
 const EMAIL = 'arthurcuvillon691@gmail.com';
 
 const SOCIAL_LINKS = [
-  { label: 'GitHub',    href: 'https://github.com/aserlite' },
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/arthur-cuvillon/' },
+  { label: 'GitHub', href: 'https://github.com/aserlite' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/arthur-cuvillon/' },
   { label: 'Instagram', href: 'https://www.instagram.com/arthur_cuvillon/' },
 ];
 
@@ -41,7 +41,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Pied de page */}
         <footer className={styles.footer}>
           <span>© {new Date().getFullYear()} Arthur Cuvillon</span>
           <span>Conçu avec passion</span>
@@ -50,3 +49,4 @@ export default function Contact() {
     </section>
   );
 }
+
