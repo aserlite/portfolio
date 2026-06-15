@@ -274,5 +274,17 @@
       "live": "https://aserlite.github.io/civdot5/"
     },
     "gallery": []
+  },
+  {
+    "id": "124",
+    "title": "Rekordbox Cue Automator",
+    "description": "Un gestionnaire local de bibliothèque Rekordbox qui automatise la création de points Cue via l'analyse de l'énergie audio et intègre un téléchargeur de titres et une analyse du genre via un modèle IA qui se base sur les spectrogrammes des titres enregistrés dans la librairie rekordbox . La solution s'articule autour d'un backend Python robuste (FastAPI, Librosa) et d'une interface frontend réactive en React et TypeScript.",
+    "tags": ["Fullstack", "AI"],
+    "coverImage": "/images/projects/rekordbox.webp",
+    "links": {},
+    "gallery": [
+      "/images/projects/rekordbox2.webp",
+      "/images/projects/rekordbox3.webp"
+    ]
   }
 ]
